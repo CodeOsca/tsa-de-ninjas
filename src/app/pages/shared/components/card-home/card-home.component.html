@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-header>
+        <img [src]="card.imgUrl" [alt]="card.title + getName">
+    </mat-card-header>
+
+    <mat-card-title> {{ card.product ? card.title : card.title + getName }} </mat-card-title>
+
+    <mat-card-subtitle> {{ card.subtitle }} </mat-card-subtitle>
+
+    <mat-card-content *ngIf="card.content">
+        {{ card.content }}
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a mat-raised-button *ngIf="card.product" [href]="card.link" target="_blank" color="primary">Ver Detalles </a>
+
+        <a mat-raised-button *ngIf="!card.product" [routerLink]="card.link" color="primary">Ver {{ card.title }}</a>
+    </mat-card-actions>
+
+</mat-card>

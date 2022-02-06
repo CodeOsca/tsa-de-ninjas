@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+svg {
+    width: 20px;
+}
+
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

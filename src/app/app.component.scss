@@ -1,0 +1,11 @@
+main {
+    padding-left: 3.8rem;
+    padding-right: 3.8rem;
+}
+
+@media(max-width:600px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

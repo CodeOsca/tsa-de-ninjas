@@ -1,0 +1,39 @@
+<section class="p-9-rem">
+    <h1> Kunais {{ getName }} </h1>
+    <p>
+        Aunque los cuchillos en naruto son casi tan inútiles como sakura, es un arma básica que todo {{ getName.slice(3).replace('s','') }} debe conocer y saber manejar, aun hay una multitud de animes {{ getName.slice(3) }} en los que si son útiles, pero si te
+        vuelves un experto en el uso de los Kunais podrás sacarle mucha utilidad como sabuza, “el demonio escondido entre la neblina”
+    </p>
+
+    <p>
+        Pero a los kunais se les puede sacar muchos usos, no se para defenderse un un enfrentamiento shinobi.
+    </p>
+
+    <p>
+        ¿No te dan ganas comprarlas?
+    </p>
+</section>
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Autenticos Cuchillos {{ getName.slice(3).replace('s','') }} </h2>
+        <p>
+            Son tal afilados que pueden cortar de todo, menos al Susano.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let knive of knives" [card]="knive"></app-card-home>
+</section>
+
+
+<section>
+    <h3>¿Por qué comprar kunais {{ getName.replace('s','') }}?</h3>
+    <p>
+        Porque son una de las armas principales que estos guerreros utilizan, no puedes considerarte un shinobi si no sabes usar los kunais, y esa es una lección muy fundamental, así que tienes que comprar kunais aquí y ahora no en otro lugar, pues estos son
+        de muy buena calidad.
+    </p>
+
+    <p>
+        Tienes que comprar aquí tus kunais {{ getName.slice(3).replace('s','') }}, muy pocas tiendas los venden y además es excelente, completa tu pack de armas {{ getName.slice(3).replace('s','') }} para alcanzar la supremacía.
+    </p>
+</section>

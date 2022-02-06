@@ -1,0 +1,30 @@
+<section class="p-9-rem">
+	<h1>Sabanas {{ getName }} </h1>
+	<p>
+		Estoy seguro de lo mucho que has buscado, pero a pesar de todo no has encontrado las preciadas cobijas {{ getName }}, pues no pierdas tu tiempo buscando más el día de hoy las tenemos en oferta, ahora puedes comprar tus tan anheladas sabanas con su respectiva temática {{ getName }}, es el momento de que dormir tranquilamente con una sabanas que estén cumplan todos tus estándares tanto en diseño como el tema.
+	</p>
+
+
+    <p>¿No te dan ganas comprarlas?</p>
+</section>
+
+
+<section class="section__card-grid">
+
+	<div class="full-grid">
+        <h2>Colección de sabanas de shinobis</h2>
+        <p>
+        	Ya es tiempo de que duermas con lo mejor y eso solo lo tenemos nosotros.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let sheet of sheets" [card]="sheet"></app-card-home>
+</section>
+
+
+<section>
+	<h3>¿Por qué comprar sabanas {{ getName }}?</h3>
+	<p>
+		Porque ya es tiempo de que pienses en lo que tú mereces, en lo que tú quieres, en lo que el mundo te debe, es por eso que debes comprar estas sabanas, no lo pienses tanto, tu tan solo hazlo.
+	</p>
+</section>

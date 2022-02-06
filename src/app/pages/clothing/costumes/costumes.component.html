@@ -1,0 +1,45 @@
+<section class="p-9-rem">
+    <h1>Disfraces {{ getName }} y para {{ getName.slice(3) }}</h1>
+    <p>
+        Quieres impresionar a tus amigos siendo un verdadero shinobi, pues disfrázate como uno, en esta ocasión te traemos una serie de disfraces {{ getName }} que definitivamente vas a querer tener para jugar, como en un mundo de fantasía.
+    </p>
+
+    <p>
+        Estos difractes te servirán tanto para fiestas o halloween, son bastante realistas y detallistas en cuanto a el diseño y los objetos que traen consigo.
+    </p>
+
+    <p>
+        ¿No te dan ganas comprarlas?
+    </p>
+</section>
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Disfraces {{ getName }}</h2>
+        <p>
+            Para un shinobi la presencia es bastante importante, y eso se recalca con estos disfraces.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let costume of costumes" [card]="costume"></app-card-home>
+
+    <div class="full-grid">
+        <h2>Vestimenta {{ getName }}</h2>
+        <p>
+            No solo te traemos disfraces si no autenticas vestimenta {{ getName.slice(3).replace('s','') }}
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let clothing of clothings" [card]="clothing"></app-card-home>
+
+
+</section>
+
+
+<section>
+    <h3>¿Porque comprar disfraces {{ getName }}?</h3>
+    <p>
+        Ya dijimos que la presencia es importante para los {{ getName.slice(3) }}, Miren de ejemplo a jiraiya enfrento dos terroristas con una prostituta en brazos y todavía salió ganando, porque el tenia la presencia más grande del mundo shinobi, la ropa también
+        es importante para eso, si un {{ getName.slice(3).replace('s', '') }} se viste como vagabundo, no lo respetara nadie.
+    </p>
+</section>

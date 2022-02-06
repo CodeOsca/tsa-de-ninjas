@@ -1,0 +1,44 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+}
+
+.container__loading {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    height: 200px;
+    width: 200px;
+    border: 10px solid #c2d6df;
+    border-radius: 50%;
+    border-top-color: rgba(34, 34, 34, 0.686);
+    transform: rotate(0deg);
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-delay: .02s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(380deg);
+    }
+}

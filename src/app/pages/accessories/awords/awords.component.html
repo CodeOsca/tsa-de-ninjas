@@ -1,0 +1,36 @@
+<section class="p-9-rem">
+    <h1>Espadas {{ getName }} </h1>
+    <p>
+        El arte del arte, la disciplina de la espada, el punto de combate principal, la habilidad de pelear con espadas {{ getName.slice(3).replace('s','') }}.
+    </p>
+
+    <p>
+        Las espadas son la principal arma de estos asesinos, todo {{ getName.slice(3).replace('s','') }} debe de saber manejar la espada, dado que esta será su principal arma, y si no encontrabas espadas pues aquí tenemos una gran variedad de ellas, no te puede
+        faltar esto, seguro que alguna de estas te gustara, y sin duda la vas a comprar.
+    </p>
+
+    <p>
+        ¿No te dan ganas comprarlas?
+    </p>
+
+</section>
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Autenticas espadas {{ getName.slice(3).replace('s','') }} </h2>
+        <p>
+            Si Sasuke Uchiha de un solo brazo se veía genial, eso tu con dos brazos lo puedes superar.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let aword of awords" [card]="aword"></app-card-home>
+</section>
+
+
+<section>
+    <h3>¿Porque comprar espadas {{ getName.slice(3).replace('s','') }}?</h3>
+    <p>
+        Si no sabes utilizar la espada entonces no eres un shinobi, un verdadero {{ getName.slice(3).replace('s','') }} tiene que saber utilizar cualquier cosas cono arma, principalmente la espada, así que para considerarte un verdadero {{ getName.slice(3).replace('s','')
+        }} tienes que comprar una espada, nosotros en esta página tenemos una variedad de espadas de calidad y de buena marca, así no tendrás que sufrir ni perder tiempo en otros lugares.
+    </p>
+</section>

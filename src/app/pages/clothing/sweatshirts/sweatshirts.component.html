@@ -1,0 +1,50 @@
+<section class="p-9-rem">
+    <h1>
+        Sudaderas {{ getName }}
+    </h1>
+    <p>
+        Protegerse del sol es bueno, pero hacerlo mientras mantienes el estilo es todavía mejor es por eso que el día de hoy te traemos las mejores sudaderas {{ getName }} que puedes encontrar en todo del mercado para {{ getName.slice(3) }}, muestra tu look con
+        lo mejor de lo mejor y eso solo lo encontraras en {{ getName.replace(' ', '') }}.org
+    </p>
+
+    <p>
+        Conoce la personalidad que puede tener un shinobi plasmado en estas chaquetas {{ getName }}, tu puedes ser el origen de tanta genialidad desbordada si tan solo te atreves a comprar una de nuestras sudaderas
+    </p>
+
+    <p>
+        Disfruta de nuestra mejor colección de sudaderas, es un arte grabado en una prenda.
+    </p>
+
+    <p>¿No te dan ganas comprarlas?</p>
+</section>
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Sudaderas {{ getName }} sin capuchas</h2>
+        <p style="margin-bottom: 0 !important;">No podrás protegerte del sol, pero serás el más perron.</p>
+    </div>
+
+    <app-card-home *ngFor="let sweatShirt of sweatShirts" [card]="sweatShirt"></app-card-home>
+
+    <div class="full-grid">
+        <h2>Sudaderas {{ getName }} con capuchas</h2>
+        <p style="margin-bottom: 0 !important;">
+            Muéstrate fachero, y protégete al mismo tiempo.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let sweatShirtsHood of sweatShirtsHoods" [card]="sweatShirtsHood"></app-card-home>
+
+</section>
+
+<section>
+    <h3>¿Porque comprar sudaderas {{ getName }}?</h3>
+    <p>
+        Mano que es esa pregunta obviamente porque son de calidad, tienen estilo, muchas personas aman a los {{ getName.slice(3) }}, y estoy seguro que tu también los amas porque si no, no estarías buscando sudaderas de niñas, perdón {{ getName }}.
+    </p>
+
+    <p>
+        Si no las vas a comprar entonces te ofrezco otra cosa, como camisetas, zapatos, pijamas, disfraces, tenemos una gran variedad de artículos con esta temática así que si no te los quieres perder, te sugiero vallas al hagas clic en el menú de la página para
+        ver todos nuestros artículos por categorías.
+    </p>
+</section>

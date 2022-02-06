@@ -1,0 +1,35 @@
+<section class="p-9-rem">
+    <h1>Camisetas {{ getName }}</h1>
+    <p>
+        Llevar una prenda única significa tener que destacar entre los demás y que mejor forma de hacerlo con una camiseta {{ getName }}, demuestra que tienes el mejor look de tu zona. La moda cambia contantemente, las camisetas {{ getName }} no lo hacen.
+    </p>
+
+    <p>
+        Viste bien y luce genial con estas camisetas de alta calidad, lo mejor que las a encontrar en moda para {{ getName.slice(3) }}.
+    </p>
+
+    <p>
+        ¿No te dan ganas comprarlas?
+    </p>
+</section>
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Autenticas Camisetas {{ getName.slice(3).replace('s','') }}</h2>
+        <p style="margin-bottom: 0 !important;">
+            Tenemos una colección divina de camisetas a tu disposición, son como camiseta traída de las estrellas.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let tsShirt of tsShirts" [card]="tsShirt"></app-card-home>
+
+</section>
+
+<section>
+    <h3>¿Porque comprar camisetas {{ getName }}?</h3>
+
+    <p>
+        Chico no lo que pasa es que estas camisetas no son de este mundo, son tan lindas que parecen traídas del cielo, si no fuera podre les duro que las compro, pero tú no debes dejar pasar esta oportunidad, si no que es ahora mismo cuando debes aprovechar
+        en comprar estascamisetas.
+    </p>
+</section>

@@ -1,0 +1,48 @@
+<section class="p-9-rem">
+    <h1> Máscaras {{ getName }} </h1>
+    <p>
+        No permitas que nadie conozca tu verdadera identidad, esto es posible gracias a las máscaras {{ getName.slice(3).replace('s','') }}, los {{ getName.slice(3) }} somos misteriosos, sigilosos y regularmente usamos camuflaje para que nadie nos descubra, ya
+        sea que usemos máscara o disfraz, nunca nadie descubre la identidad.
+    </p>
+
+    <p>
+        Conviértete en un ser misterioso cubriendo tu rostro, no sería una buena que los demás tomen interés por ti, que una pequeña pieza de tu comportamiento o de tu cuerpo cause intriga, la curiosidad que los demás tendrán te harás mas popular.
+    </p>
+
+    <p>
+        ¿No te dan ganas comprarlas?
+    </p>
+
+</section>
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Autenticas Máscaras {{ getName.slice(3) }} </h2>
+        <p>
+            Máscaras tradicionales {{ getName.slice(3).replace('s','') }}.
+        </p>
+    </div>
+    <app-card-home *ngFor="let mask of masks" [card]="mask"></app-card-home>
+
+    <div class="full-grid">
+        <h2>Máscaras {{ getName.slice(3) }} Ambu</h2>
+        <p>
+            Máscaras {{ getName.slice(3).replace('s','') }} Ambu de naruto.
+        </p>
+    </div>
+    <app-card-home *ngFor="let masksAnbu of masksAnbus" [card]="masksAnbu"></app-card-home>
+</section>
+
+
+<section>
+    <h3>¿Por qué comprar máscaras de {{ getName.slice(3) }}?</h3>
+    <p>
+        Pues para complementar tu disfraz {{ getName.replace('s','') }}, la máscara es importante, pregúntale a Kakashi sensei, es nunca se quito la máscara y era uno de los más temimos por todos las naciones {{ getName.slice(3) }}, claro que este le gustaba
+        meterle los dedos a los niños por el siempre sucio pero aun así ese {{ getName.slice(3).replace('s','') }} infundía temor, y puedes usar esas máscaras como multiusos, como cubrirte del sol, o para halloween o solo por diversión, mano hasta la
+        puedes usar como un abanico.
+    </p>
+
+    <p>
+        Son un producto original que yo se que tu quieres, así que cómpralo ahora.
+    </p>
+</section>

@@ -1,0 +1,34 @@
+<section class="p-9-rem">
+    <h1>Fundas de teléfono {{ getName }} </h1>
+    <p>
+        Los teléfonos son importantes y caros, no nos podemos dar el lujo de dañarlos, rallarles la pantalla o maltratarlos, y por eso el día de hoy te ofrecemos fundas de teléfono con su respectiva temática {{ getName }}, son baratos de buena calidad y de seguro
+        algunos modelos te pueden interesar, lo más seguro es que al final del día compraras uno que te guste.
+    </p>
+
+    <p>
+        Estas fundas protegerán tu teléfono contra todo tipo de golpes, claro que eso no significa que vayas a darle coñazos a tu móvil solo para probarlos, a demás de darle protección tu teléfono lucirá mucho mas fachero de lo que era antes.
+    </p>
+
+    <p>
+        ¿No te dan ganas comprarlas?
+    </p>
+</section>
+
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Fundas móviles {{ getName }}</h2>
+        <p>Estas fundas son la mejor defensa “antiputasos” para tu teléfono.</p>
+    </div>
+
+    <app-card-home *ngFor="let coversMovile of coversMoviles" [card]="coversMovile"></app-card-home>
+
+</section>
+
+<section>
+    <h3>Fundas {{ getName.slice(3) }} móviles </h3>
+    <p>
+        Asegurar que te móvil no reciba golpes es importante pero es precavido y preventivo es todavía más importante, nosotros no dañamos, rallamos o rompemos nuestros móviles porque diversión esos son accidentes que ocurren a lo largo del tiempo, así nuestro
+        teléfonos hay que protegerlos.
+    </p>
+</section>

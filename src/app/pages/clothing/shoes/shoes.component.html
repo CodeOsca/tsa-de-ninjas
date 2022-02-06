@@ -1,0 +1,48 @@
+<section class="p-9-rem">
+    <h1>Zapatos {{ getName }} y para {{ getName.slice(3) }} </h1>
+
+    <p>
+        Para un {{ getName.slice(3).replace('s', '') }} el sigilo es muy importante, para ello es necesario tener el calzado apropiado, y en esta oportunidad eso es lo que te traemos, el mejor calzado {{ getName.replace('s','') }} que puedes tener eso es lo que
+        el día de hoy te vamos a conceder.
+    </p>
+
+    <p>
+        Pero no solo te traemos zapatos para {{ getName.slice(3) }} si no que también zapatos con esta respectiva temática, puedes practicar como ser un maestro shinobi o solo lucir genial con fantásticos tus zapatos {{ getName }}, forma una nueva tendencia con
+        solo el uso de los mismos.
+    </p>
+
+    <p>
+        ¿No te dan ganas comprarlas?
+    </p>
+</section>
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Autenticos Zapatos {{ getName }}</h2>
+        <p>
+            Una temática {{ getName.slice(3) }} usada para el calzado, esto es lo mas pavo en zapatos.
+        </p>
+    </div>
+    <app-card-home *ngFor="let shoe of shoes" [card]="shoe"></app-card-home>
+
+    <div class="full-grid">
+        <h2>Zapatos para {{ getName.slice(3) }} baratos</h2>
+        <p>
+            Zapatos reales {{ getName.slice(3).replace('s','') }}, para no ser descubierto en plena huida.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let shoe of shoes2" [card]="shoe"></app-card-home>
+
+</section>
+
+<section>
+    <h3>¿Porque comprar zapatos para {{ getName.slice(3).replace('s', '') }}?</h3>
+    <p>
+        Como que ¿Por qué? Queréis que te maten en la mitad de la misión o que, tu honor de perdería si llevaras zapatos diferentes a la guerra, los zapatos son importantes, mira que son más útiles que kunais en naruto, A parte son baratos no.
+    </p>
+
+    <p>
+        De verdad que hay que tener buenos zapatos ya sea para lucir o para ir a darte coñazos con los chicos del barrio, pero ya sea el caso estos tienen buen precio y son de buena calidad.
+    </p>
+</section>

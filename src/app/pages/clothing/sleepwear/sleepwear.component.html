@@ -1,0 +1,37 @@
+<section class="p-9-rem">
+    <h1>Pijamas {{ getName }} </h1>
+    <p>
+        Para dormir con comodidad y tranquilidad lo mejor sería usar un pijama {{ getName.replace('s','') }} , todos necesitamos mimir por lo menos 8 horas al día, no sería nada bueno si estas recomendaciones no se cumplen, es por eso que tenemos para ti, lo
+        mejor en pijamas para adquirir mucho sueño dormir mas y disfrutar fantaseando en mis sueños.
+    </p>
+
+    <p>
+        La tela suave del pijama en definitiva te gustara, apena los veas no podrás esperar para comprarlos, son muy chulos así que no esperes más.
+    </p>
+
+    <p>¿No te dan ganas comprarlas?</p>
+
+</section>
+
+
+<section class="section__card-grid">
+    <div class="full-grid">
+        <h2>Pijamas {{ getName }} para dormir</h2>
+        <p>
+            Tener un buen pijama y verse muy fachero, cómpralas ahora y obtén buen sueño.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let sleepwear of sleepwears" [card]="sleepwear"></app-card-home>
+</section>
+
+<section>
+    <h3>¿Por qué comprar pijamas {{ getName }}?</h3>
+    <p>
+        Porque estas lo que te van a dar es un muy buen sueño, son cómodas, están hechas con buena tela, son de buena calidad, comprar el pijama y nada, bueno mentira, puedes comprar otras cosas.
+    </p>
+
+    <p>
+        Nuestros pijamas {{ getName.slice(3).replace('s','') }} son lo mejor del mercado, vas a poder dormir sin problemas durante horas, y eso está asegurado, de no ser así tanta gente no las estuviera comprando.
+    </p>
+</section>
