@@ -6,8 +6,8 @@
     </p>
 
     <p>
-        Seguramente te interesara un disfraz {{ getName.replace('s','') }} para esconder tu identidad, sacar el kakashi sensei con tan solo una máscara tipo bufanda, puedes llevarte también la camiseta {{ getName.replace('s','') }} que te luce más, estos productos {{ getName.replace('s','') }} te harán sentir como un niño
-        en navidad.
+        Seguramente te interesara un disfraz {{ getName.replace('s','') }} para esconder tu identidad, sacar el kakashi sensei con tan solo una máscara tipo bufanda, puedes llevarte también la camiseta {{ getName.replace('s','') }} que te luce más, estos productos
+        {{ getName.replace('s','') }} te harán sentir como un niño en navidad.
     </p>
 
     <h2>¿Qué son los {{ getName.slice(3) }}?</h2>
@@ -32,7 +32,7 @@
         </p>
     </div>
 
-    <app-card-home *ngFor="let card of clothing" [card]="card"></app-card-home>
+    <app-card-home *ngFor="let clothing of clothings" [card]="clothing"></app-card-home>
 
     <div class="full-grid">
         <h3> Accesorios {{ getName }}</h3>
@@ -42,7 +42,19 @@
         </p>
     </div>
 
-    <app-card-home *ngFor="let card of accessories" [card]="card"></app-card-home>
+    <app-card-home *ngFor="let accessorie of accessories" [card]="accessorie"></app-card-home>
+
+    <div class="full-grid">
+        <h3> Artículos domésticos para el hogar {{ getName }}</h3>
+
+        <p>
+            Estos productos son indispensables para un fanático {{ getName.slice(3).replace('s','') }} como tú.
+        </p>
+    </div>
+
+    <app-card-home *ngFor="let house of home" [card]="house"></app-card-home>
+
+
 </section>
 
 

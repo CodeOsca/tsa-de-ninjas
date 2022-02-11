@@ -1,6 +1,8 @@
 import { Component} from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
-import { MainService } from '../../../services/main.service'; 
+import { MainService } from '../../shared/services/main.service'; 
+import { Title } from '@angular/platform-browser';
+import { MetaDataService } from '../../shared/services/meta-data.service';
 
 @Component({
   selector: 'app-stars',
@@ -22,7 +24,23 @@ export class StarsComponent  {
     }
   ]
 
-  constructor(private mainService:MainService){}
+  constructor(
+    private mainService:MainService,
+    private metaDataService: MetaDataService,
+    private title:Title
+    ){}
+
+
+    ngOnInit(): void {
+      let t:string = `Autenticas Estrellas ${this.getName.slice(3)}`
+      this.title.setTitle(t)
+      this.metaDataService.generateTags({
+        title:t,
+        description:`Las estrellas son una de las armas clásicas de los ${this.getName.slice(3)} todo ${this.getName.slice(3).replace('s','')} que se respecte las usa`,
+        slug:location.href,
+        image:this.stars[0].imgUrl
+      })
+    }
 
   get getName(){
     return this.mainService.giveName()

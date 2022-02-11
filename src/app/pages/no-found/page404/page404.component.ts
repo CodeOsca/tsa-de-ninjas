@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common'
 
 @Component({
@@ -8,7 +8,9 @@ import { isPlatformBrowser } from '@angular/common'
 })
 export class Page404Component implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor( @Inject(PLATFORM_ID) private platformid:any ) {}
+
+
   ngOnDestroy(): void {
     this.resetBack()
   }
@@ -21,13 +23,16 @@ export class Page404Component implements OnInit, OnDestroy {
 
 
   changeBack(){
-    if( true ){
+    if( isPlatformBrowser(this.platformid) ){
       document.body.style.backgroundColor = 'black'
     }
   }
 
   resetBack(){
-    document.body.style.backgroundColor = 'initial'
+    if( isPlatformBrowser(this.platformid) ){
+      document.body.style.backgroundColor = 'initial'
+    }
+
   }
 
 }

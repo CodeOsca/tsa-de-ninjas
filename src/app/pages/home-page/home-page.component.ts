@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { MainService } from '../../services/main.service'; 
+import { Title } from '@angular/platform-browser';
+import { MetaDataService } from '../shared/services/meta-data.service';
+import { MainService } from '../shared/services/main.service'; 
 import { Card } from '../shared/interfaces/card';
 
 @Component({
@@ -11,7 +13,7 @@ import { Card } from '../shared/interfaces/card';
   ]
 })
 export class HomePageComponent {
-  clothing:Card[] = [
+  clothings:Card[] = [
     {
       title:'Sudaderas',
       subtitle:'Compralo ahora',
@@ -98,18 +100,53 @@ export class HomePageComponent {
     {
       title:'Vinilos',
       subtitle:'Compralo ahora',
-      content:'Compra esto y ya',
+      content:'te traemos una serie de vinilos shinobis para que puedas hacer todas las decoraciones que te plazcan y dejar tu marca regada.',
       link:'/accesorios/vinilos',
       imgUrl:'./assets/img/user-ninja-solid.svg',
       product:false
     }
   ]
 
+
+  home:Card[] = [
+    {
+      title:'Lámparas',
+      subtitle:'Compralo ahora',
+      content:`No pierdas más tiempo en comprar tu lámpara ${this.getName.replace('s','')}, ella será tu mejor amiga.`,
+      link:'/hogar/lamparas',
+      imgUrl:'./assets/img/user-ninja-solid.svg',
+      product:false
+    },
+  
+    {
+      title:'Sábanas',
+      subtitle:'Compralo ahora',
+      content:`Compra sábanas ${this.getName.slice(3).replace('s','')}, es hora de mimir con sábanas que cumplan tus estándares de diseño y tema.`,
+      link:'/hogar/sabanas',
+      imgUrl:'./assets/img/user-ninja-solid.svg',
+      product:false
+    },
+
+  ]
+
   constructor(
-    private mainService:MainService
+    private mainService:MainService,
+    private title:Title,
+    private metaDataService:MetaDataService
   ){}
 
   get getName(){
     return this.mainService.giveName()
+  }
+
+  ngOnInit(): void {
+    let t:string = `Tienda online de productos ${this.getName}`
+    this.title.setTitle(t)
+    this.metaDataService.generateTags({
+      title:t,
+      description:`Tenemos una serie de productos ${this.getName}, tales como camisetas, sudaderas, vestimenta, disfraces, fundas móviles, lámparas, sabanas y mucho más a buen precio y calidad`,
+      slug:location.href,
+      image:"https://m.media-amazon.com/images/I/61gFnOvYnJL._AC_UL320_.jpg"
+    })
   }
 }

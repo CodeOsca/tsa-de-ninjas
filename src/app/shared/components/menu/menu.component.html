@@ -6,9 +6,10 @@
 
     <span class="example-spacer"></span>
 
-    <button mat-button [matMenuTriggerFor]="ninjas" style="font-size:18px;">
-            Productos
+    <button mat-button class="hamburger hamburger--collapse" [matMenuTriggerFor]="ninjas">
+        Productos
     </button>
+
 
     <mat-menu #ninjas="matMenu">
         <button class="active" mat-menu-item [matMenuTriggerFor]="Ropa">Ropa</button>
