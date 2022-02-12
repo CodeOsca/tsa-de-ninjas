@@ -1,12 +1,13 @@
 <section class="p-9-rem">
-	<h1>Lámparas  {{ getName }} baratas</h1>
-	<p>
-		Seguro que los clásicos bombillos de siempre ya te tienen casado no, ya es hora de probar algo diferente, es el momento de probar una de nuestras lámparas {{ getName.replace('s','') }} supremas, lo mejor que vas a conseguir para iluminar tu habitación personal, sala de estar, cocina o el área donde quieras alumbrar más, todo esto con nuestras genuinas lámparas {{ getName }}.
-	</p>
+    <h1>Lámparas {{ getName }} baratas</h1>
+    <p>
+        Seguro que los clásicos bombillos de siempre ya te tienen casado no, ya es hora de probar algo diferente, es el momento de probar una de nuestras lámparas {{ getName.replace('s','') }} supremas, lo mejor que vas a conseguir para iluminar tu habitación
+        personal, sala de estar, cocina o el área donde quieras alumbrar más, todo esto con nuestras genuinas lámparas {{ getName }}.
+    </p>
 
-	<p>
-		Podrás iluminar más el área que con esos bombillos que se queman tan fácilmente y duran vivos tan poco tiempo, además de que tienen un diseño esquemático impresionante e impactante, tanta así que vas a quedar con la boca abierta.
-	</p>
+    <p>
+        Podrás iluminar más el área que con esos bombillos que se queman tan fácilmente y duran vivos tan poco tiempo, además de que tienen un diseño esquemático impresionante e impactante, tanta así que vas a quedar con la boca abierta.
+    </p>
 
     <p>¿No te dan ganas comprarlas?</p>
 
@@ -14,24 +15,29 @@
 
 
 <section class="section__card-grid">
-	<div class="full-grid">
+    <div class="full-grid">
         <h2>Lámparas {{ getName }}</h2>
         <p>
-        	Veras mejor el lugar que antes con estas magnificas lámparas.
+            Veras mejor el lugar que antes con estas magnificas lámparas.
         </p>
     </div>
 
     <app-card-home *ngFor="let lamp of lamps" [card]="lamp"></app-card-home>
+
+    <div class="full-grid text-c" [hidden]="hiddenutton">
+        <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>
+    </div>
 </section>
 
 
 <section>
-	<h3>¿Por qué comprar lámparas {{ getName }}?</h3>
-	<p>
-		Puesto porque van a iluminar tu hogar mejor de lo que lo haría cualquier bombillo, eso es razón sufriente para comprarlos ahora, los mejores modelos se agotan rápidamente así que aprovecha ahora que puedes, hasta nuestro modelo más barato tiene un diseño arquitectónico encantador y emerge una luz despampanante.
-	</p>
+    <h3>¿Por qué comprar lámparas {{ getName }}?</h3>
+    <p>
+        Puesto porque van a iluminar tu hogar mejor de lo que lo haría cualquier bombillo, eso es razón sufriente para comprarlos ahora, los mejores modelos se agotan rápidamente así que aprovecha ahora que puedes, hasta nuestro modelo más barato tiene un diseño
+        arquitectónico encantador y emerge una luz despampanante.
+    </p>
 
-	<p>
-		No pierdas más tiempo en comprar tu lámpara {{ getName.replace('s','') }}, ella será tu mejor amiga.
-	</p>
+    <p>
+        No pierdas más tiempo en comprar tu lámpara {{ getName.replace('s','') }}, ella será tu mejor amiga.
+    </p>
 </section>

@@ -20,20 +20,15 @@
 
 <section class="section__card-grid">
     <div class="full-grid">
-        <h2>Sudaderas {{ getName }} sin capuchas</h2>
-        <p style="margin-bottom: 0 !important;">No podrás protegerte del sol, pero serás el más perron.</p>
+        <h2>Sudaderas {{ getName }} con capuchas</h2>
+        <p style="margin-bottom: 0 !important;">No solo te protegeras del sol, si no que serás el más perron.</p>
     </div>
 
     <app-card-home *ngFor="let sweatShirt of sweatShirts" [card]="sweatShirt"></app-card-home>
 
-    <div class="full-grid">
-        <h2>Sudaderas {{ getName }} con capuchas</h2>
-        <p style="margin-bottom: 0 !important;">
-            Muéstrate fachero, y protégete al mismo tiempo.
-        </p>
+    <div class="full-grid text-c" [hidden]="hiddenutton">
+        <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>
     </div>
-
-    <app-card-home *ngFor="let sweatShirtsHood of sweatShirtsHoods" [card]="sweatShirtsHood"></app-card-home>
 
 </section>
 

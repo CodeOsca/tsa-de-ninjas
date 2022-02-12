@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClothingRoutingModule } from './clothing.routing';
 import { SharedModule } from '../shared/shared.module';
+import { MatButtonModule } from '@angular/material/button';
 
 import { TshirtsComponent } from './tshirts/tshirts.component';
 import { SweatshirtsComponent } from './sweatshirts/sweatshirts.component';
@@ -23,7 +24,8 @@ import { CostumesComponent } from './costumes/costumes.component';
   imports: [
     CommonModule,
     ClothingRoutingModule,
-    SharedModule
+    SharedModule,
+    MatButtonModule
   ]
 })
 export class ClothingModule { }

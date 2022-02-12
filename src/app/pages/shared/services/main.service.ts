@@ -4,8 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MainService {
-
   giveName():string{
     return 'de ninjas'
+  }
+
+  scrollZero(){
+    scrollTo(0,0)
   }
 }

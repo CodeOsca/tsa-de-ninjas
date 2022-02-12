@@ -13,10 +13,7 @@ const routes: Routes = [
         path:'',
         children:[
             { path: 'espadas', component: AwordsComponent, pathMatch:'full' },
-            { path: 'kunais', component: KnivesComponent },
             { path: 'mascaras', component: MasksComponent },
-            { path: 'estrellas', component: StarsComponent },
-            { path: 'vinilos', component: VinylComponent },
             { path: 'fundas-moviles', component: MobileCoversComponent },
             { path:'**', redirectTo:'/404' }
         ]

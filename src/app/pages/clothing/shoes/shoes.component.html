@@ -18,21 +18,13 @@
 
 <section class="section__card-grid">
     <div class="full-grid">
-        <h2>Autenticos Zapatos {{ getName }}</h2>
-        <p>
-            Una temática {{ getName.slice(3) }} usada para el calzado, esto es lo mas pavo en zapatos.
-        </p>
-    </div>
-    <app-card-home *ngFor="let shoe of shoes" [card]="shoe"></app-card-home>
-
-    <div class="full-grid">
         <h2>Zapatos para {{ getName.slice(3) }} baratos</h2>
         <p>
             Zapatos reales {{ getName.slice(3).replace('s','') }}, para no ser descubierto en plena huida.
         </p>
     </div>
 
-    <app-card-home *ngFor="let shoe of shoes2" [card]="shoe"></app-card-home>
+    <app-card-home *ngFor="let shoe of shoes" [card]="shoe"></app-card-home>
 
 </section>
 

@@ -20,6 +20,10 @@
     </div>
 
     <app-card-home *ngFor="let sheet of sheets" [card]="sheet"></app-card-home>
+
+    <div class="full-grid text-c" [hidden]="hiddenutton">
+        <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>
+    </div>
 </section>
 
 
