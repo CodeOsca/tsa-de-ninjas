@@ -3,6 +3,7 @@ import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service'; 
 import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
+import { MasksService } from '../../shared/services/masks.service';
 
 @Component({
   selector: 'app-masks',
@@ -13,46 +14,32 @@ import { MetaDataService } from '../../shared/services/meta-data.service';
     ]
 })
 export class MasksComponent {
-
-  masks:Card[] = [
-    {
-      title:'Una Sudaderas',
-      subtitle:'Compralo ahora',
-      link:'/ropa/sudaderas',
-      imgUrl:'./assets/img/user-ninja-solid.svg',
-      product:true
-    }
-  ]
-
-  masksAnbus:Card[] = [
-    {
-      title:'Una Sudaderas',
-      subtitle:'Compralo ahora',
-      link:'/ropa/sudaderas',
-      imgUrl:'./assets/img/user-ninja-solid.svg',
-      product:true
-    }
-  ]
+  masks:Card[] = []
 
   constructor(
     private mainService:MainService,
     private metaDataService: MetaDataService,
-    private title:Title
-  ){}
+    private masksService:MasksService
+  ){
+    this.mainService.scrollZero()
+    this.setProducts()
+  }
 
   ngOnInit(): void {
     let t:string = `Autenticas Máscaras ${this.getName.slice(3)}`
-    this.title.setTitle(t)
     this.metaDataService.generateTags({
       title:t,
       description:`No permitas que nadie conozca tu verdadera identidad, esto es posible gracias a las máscaras ${this.getName.slice(3).replace('s','')}`,
-      slug:location.href,
+      slug:`${this.mainService.nameSite}/accesorios/mascaras`,
       image:this.masks[0].imgUrl
     })
   }
 
-  get getName(){
+  get getName():string{
     return this.mainService.giveName()
   }
 
+  setProducts():void{
+    this.masks = this.masksService.masks
+  }
 }

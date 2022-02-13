@@ -14,7 +14,6 @@
     </p>
 </section>
 
-
 <section class="section__card-grid">
     <div class="full-grid">
         <h2>Fundas móviles {{ getName }}</h2>
@@ -22,6 +21,10 @@
     </div>
 
     <app-card-home *ngFor="let coversMovile of coversMoviles" [card]="coversMovile"></app-card-home>
+
+    <div class="full-grid text-c" [hidden]="hiddenutton">
+        <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>
+    </div>
 
 </section>
 

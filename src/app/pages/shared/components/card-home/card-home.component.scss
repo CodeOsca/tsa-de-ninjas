@@ -1,6 +1,6 @@
 mat-card-header {
     margin-bottom: 15px;
-    height: 230px;
+    height: 300px;
     position: relative;
 }
 
@@ -10,6 +10,7 @@ img {
     position: absolute;
     top: 5px;
     left: 5px;
+    object-fit: cover;
 }
 
 a {

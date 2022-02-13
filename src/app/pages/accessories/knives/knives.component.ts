@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service'; 
-import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 
 @Component({
@@ -26,14 +25,11 @@ export class KnivesComponent {
 
   constructor(
     private mainService:MainService,
-    private metaDataService: MetaDataService,
-    private title:Title
+    private metaDataService: MetaDataService
   ){}
-
 
   ngOnInit(): void {
     let t:string = `Autenticas kunais ${this.getName.slice(3)}`
-    this.title.setTitle(t)
     this.metaDataService.generateTags({
       title:t,
       description:`Son tal afilados que pueden cortar de todo, menos al Susano`,

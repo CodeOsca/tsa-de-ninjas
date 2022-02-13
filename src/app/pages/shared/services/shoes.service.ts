@@ -16,15 +16,13 @@ export class ShoesService {
       },
 
 
-
       {
         title: 'Wacoku, Tabi de ninja para práctica al aire libre, altura media',
-        subtitle: 'Compralo ahora',
+        subtitle: 'No tengo un subtitulo pero por favor cómprame',
         link: 'https://www.amazon.es/Artes-Marciales-Ninja-Exterior-Largo/dp/B003CMBFWU/ref=sr_1_7?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2GX4EAIKPU9KN&keywords=zapatos+ninja&qid=1644535915&sprefix=zapatos+ninja%2Caps%2C491&sr=8-7',
         imgUrl: 'https://m.media-amazon.com/images/I/51rpjpFhK7S._AC_UL320_.jpg',
         product: true
       },
-
 
 
       {

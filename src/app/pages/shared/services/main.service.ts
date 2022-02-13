@@ -11,4 +11,8 @@ export class MainService {
   scrollZero(){
     scrollTo(0,0)
   }
+
+  get nameSite():string{
+    return 'deninjas.store'
+  }
 }

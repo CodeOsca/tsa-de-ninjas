@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccessoriesRoutingModule } from './accessories.routing';
 import { SharedModule } from '../shared/shared.module';
+import { MatButtonModule } from '@angular/material/button';
 
 
 import { MasksComponent } from './masks/masks.component';
@@ -25,7 +26,8 @@ import { MobileCoversComponent } from './mobile-covers/mobile-covers.component';
   imports: [
     CommonModule,
     AccessoriesRoutingModule,
-    SharedModule
+    SharedModule,
+    MatButtonModule
   ]
 })
 export class AccessoriesModule { }

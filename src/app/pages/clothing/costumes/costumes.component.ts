@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
-import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { CostumesService } from '../../shared/services/costumes.service';
 
@@ -20,7 +19,6 @@ export class CostumesComponent implements OnInit {
   constructor(
     private mainService: MainService,
     private metaDataService: MetaDataService,
-    private title: Title,
     private costumesService: CostumesService
   ) {
     this.mainService.scrollZero()
@@ -30,24 +28,23 @@ export class CostumesComponent implements OnInit {
 
   ngOnInit(): void {
     let t: string = `Disfraces ${this.getName}`
-    this.title.setTitle(t)
     this.metaDataService.generateTags({
       title: t,
       description: `Excelentes disfraces ${this.getName}, nadie sabrá si eres real o una copia, tenemos buenos precios y una calidad increíble`,
-      slug: location.href,
+      slug: `${this.mainService.nameSite}/ropa/disfraces`,
       image: 'https://m.media-amazon.com/images/I/71FUYP95kCL._AC_UL320_.jpg'
     })
   }
 
-  get getName() {
+  get getName():string {
     return this.mainService.giveName()
   }
 
-  setProducts(){
+  setProducts():void{
     this.costumes = this.costumesService.costumes
   }
 
-  incrementsProducts(){
+  incrementsProducts():void{
     this.costumes = this.costumes.concat(this.costumesService.costumes2)
   }
 
@@ -55,7 +52,7 @@ export class CostumesComponent implements OnInit {
     this.hiddenutton = !this.hiddenutton
   }
 
-  clickButton(){
+  clickButton():void{
     this.incrementsProducts()
     this.toggleButton()
   }

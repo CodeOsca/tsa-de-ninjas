@@ -19,7 +19,7 @@ export class CostumesService {
 
       {
         title: 'Rubies Disfraz ninja dragon',
-        subtitle: 'Compralo ahora',
+        subtitle: 'No tengo un subtitulo pero por favor cómprame',
         link: 'https://www.amazon.es/Rubies-Disfraz-ninja-dragon-641143-L/dp/B078NFJVCQ/ref=sr_1_2?keywords=Disfraces+ninja&qid=1644534914&sr=8-2',
         imgUrl: 'https://m.media-amazon.com/images/I/71CsezmpuxL._AC_UL320_.jpg',
         product: true
@@ -46,7 +46,7 @@ export class CostumesService {
 
       {
         title: 'WIDMAN Ninja - Niños Disfraz',
-        subtitle: ' Grande - 158cm , color/modelo surtido',
+        subtitle: 'Grande - 158cm , color/modelo surtido',
         link: 'https://www.amazon.es/WIDMAN-Ninja-Ni%C3%B1os-Disfraz-Grande/dp/B003Y7JJN0/ref=sr_1_4?keywords=Disfraces+ninja&qid=1644534914&sr=8-4',
         imgUrl: 'https://m.media-amazon.com/images/I/71DgAGasAdL._AC_UL320_.jpg',
         product: true

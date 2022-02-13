@@ -1,7 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
-import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { LampsService } from '../../shared/services/lamps.service';
 
@@ -20,7 +19,6 @@ export class LampsComponent implements OnInit {
   constructor(
     private mainService: MainService,
     private metaDataService: MetaDataService,
-    private title: Title,
     private lampsService: LampsService
   ) {
     this.mainService.scrollZero()
@@ -30,11 +28,10 @@ export class LampsComponent implements OnInit {
 
   ngOnInit(): void {
     let t: string = `Lámparas ${this.getName}`
-    this.title.setTitle(t)
     this.metaDataService.generateTags({
       title: t,
       description: `Súper Lámparas ${this.getName} de buena calidad, con un precio barato y con estilo único en su clase`,
-      slug: location.href,
+      slug: `${this.mainService.nameSite}/hogar/lamparas`,
       image: 'https://m.media-amazon.com/images/I/51QojoYXTRL._AC_UL320_.jpg'
     })
   }

@@ -12,6 +12,7 @@ a {
 
 svg {
     width: 20px;
+    color: white;
 }
 
 mat-toolbar {
@@ -19,4 +20,16 @@ mat-toolbar {
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+@media (max-width:800px) {
+    .menu-test {
+        display: none;
+    }
+}
+
+@media (min-width:801px) {
+    .menu-icon {
+        display: none;
+    }
 }

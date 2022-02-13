@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
-import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { SleepWearService } from '../../shared/services/sleepwear.service';
 
@@ -19,7 +18,6 @@ export class SleepwearComponent {
   constructor(
     private mainService: MainService,
     private metaDataService: MetaDataService,
-    private title: Title,
     private sleepWearService: SleepWearService
   ) {
     this.setProducts()
@@ -28,11 +26,10 @@ export class SleepwearComponent {
 
   ngOnInit(): void {
     let t: string = `Pijamas ${this.getName}`
-    this.title.setTitle(t)
     this.metaDataService.generateTags({
       title: t,
       description: `La tela suave del pijama ${this.getName.slice(3).replace('s', '')} en definitiva te gustara, lo mejor en pijamas para adquirir mucho sueño dormir más`,
-      slug: location.href,
+      slug: `${this.mainService.nameSite}/ropa/pijamas`,
       image: this.sleepwears[0].imgUrl
     })
   }

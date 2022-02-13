@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
-import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { SweeatsHirtsService } from '../../shared/services/sweeatshirts.service';
 
@@ -20,7 +19,6 @@ export class SweatshirtsComponent {
   constructor(
     private mainService: MainService,
     private metaDataService: MetaDataService,
-    private title: Title,
     private sweeatsHirtsService: SweeatsHirtsService
   ) {
     this.mainService.scrollZero()
@@ -30,24 +28,23 @@ export class SweatshirtsComponent {
 
   ngOnInit(): void {
     let t: string = `Sudaderas ${this.getName}`
-    this.title.setTitle(t)
     this.metaDataService.generateTags({
       title: t,
       description: `Hoy te traemos las mejores sudaderas ${this.getName} que puedes encontrar en todo del mercado para ${this.getName.slice(3)}`,
-      slug: location.href,
+      slug: `${this.mainService.nameSite}/ropa/sudaderas`,
       image: 'https://m.media-amazon.com/images/I/61nT9pjqRqL._AC_UL320_.jpg'
     })
   }
 
-  get getName() {
+  get getName():string{
     return this.mainService.giveName()
   }
 
-  setProducts(){
+  setProducts():void{
     this.sweatShirts = this.sweeatsHirtsService.sweeatsHirts
   }
 
-  incrementsProducts(){
+  incrementsProducts():void{
     this.sweatShirts = this.sweatShirts.concat(this.sweeatsHirtsService.sweeatsHirts2)
   }
 
@@ -55,7 +52,7 @@ export class SweatshirtsComponent {
     this.hiddenutton = !this.hiddenutton
   }
 
-  clickButton(){
+  clickButton():void{
     this.incrementsProducts()
     this.toggleButton()
   }

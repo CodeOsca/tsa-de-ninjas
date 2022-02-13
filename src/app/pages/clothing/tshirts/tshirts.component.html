@@ -23,6 +23,10 @@
 
     <app-card-home *ngFor="let tsShirt of tsShirts" [card]="tsShirt"></app-card-home>
 
+    <div class="full-grid text-c" [hidden]="hiddenutton">
+        <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>
+    </div>
+
 </section>
 
 <section>
