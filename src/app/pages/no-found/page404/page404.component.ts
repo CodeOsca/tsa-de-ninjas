@@ -1,38 +1,18 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common'
+import { Component } from '@angular/core';
+import { MainService } from '../../shared/services/main.service';
 
 @Component({
   selector: 'app-page404',
   templateUrl: './page404.component.html',
   styleUrls: ['./page404.component.scss']
 })
-export class Page404Component implements OnInit, OnDestroy {
 
-  constructor( @Inject(PLATFORM_ID) private platformid:any ) {}
-
-
-  ngOnDestroy(): void {
-    this.resetBack()
+export class Page404Component{
+  constructor( private mainService:MainService ){
+    mainService.scrollZero()
   }
 
-  ngOnInit(): void {
-    this.changeBack()
+  get nameSite():string{
+    return this.mainService.nameSite
   }
-
-
-
-
-  changeBack(){
-    if( isPlatformBrowser(this.platformid) ){
-      document.body.style.backgroundColor = 'black'
-    }
-  }
-
-  resetBack(){
-    if( isPlatformBrowser(this.platformid) ){
-      document.body.style.backgroundColor = 'initial'
-    }
-
-  }
-
 }

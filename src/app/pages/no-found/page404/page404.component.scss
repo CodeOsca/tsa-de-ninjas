@@ -1,10 +1,21 @@
-h1 {
-    color: #444D56;
-    text-align: center;
+h1,
+h2,
+p {
+    color: #a39f9f;
+}
+
+span {
+    color: #215bee;
 }
 
 section {
     padding-top: 4rem;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width:600px) {
+    section {
+        text-align: center;
+    }
 }

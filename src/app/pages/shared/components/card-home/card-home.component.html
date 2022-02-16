@@ -12,7 +12,7 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <a mat-raised-button *ngIf="card.product" [href]="card.link" target="_blank" color="primary">Ver Detalles </a>
+        <a mat-raised-button rel="nofollow" *ngIf="card.product" [href]="card.link" target="_blank" color="primary">Ver Detalles </a>
 
         <a mat-raised-button *ngIf="!card.product" [routerLink]="card.link" color="primary">Ver {{ card.title }}</a>
     </mat-card-actions>
