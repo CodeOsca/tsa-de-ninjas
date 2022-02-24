@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from '../../shared/services/main.service'; 
 
 @Component({
   selector: 'app-warn-legal',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarnLegalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private mainService:MainService,
+    ) { }
 
   ngOnInit(): void {
+    this.mainService.scrollZero()
   }
-
 }

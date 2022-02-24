@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from '../../shared/services/main.service'; 
 
 @Component({
   selector: 'app-politics-privacy',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PoliticsPrivacyComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private mainService:MainService,
+    ) { }
 
   ngOnInit(): void {
+    this.mainService.scrollZero()
   }
 
 }
