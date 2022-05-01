@@ -22,4 +22,8 @@ export class MetaDataService {
     this.meta.updateTag({ property:'og:image', content:config.image })
     this.meta.updateTag({ property:'og:url', content:`https://www.${config.slug}` })
   }
+
+  generateNoIndex(){
+    this.meta.addTag({name:'robots', content:'noindex' })
+  }
 }

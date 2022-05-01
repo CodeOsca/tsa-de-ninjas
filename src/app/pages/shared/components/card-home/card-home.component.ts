@@ -1,4 +1,4 @@
-import { Component, Input, AfterContentInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MainService } from '../../services/main.service'; 
 import { Card } from '../../interfaces/card';
 

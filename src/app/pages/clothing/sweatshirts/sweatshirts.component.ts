@@ -40,6 +40,10 @@ export class SweatshirtsComponent {
     return this.mainService.giveName()
   }
 
+  get nameSite(){
+    return this.mainService.nameSite
+  }
+
   setProducts():void{
     this.sweatShirts = this.sweeatsHirtsService.sweeatsHirts
   }
