@@ -2,17 +2,16 @@ import { Component, Input } from '@angular/core';
 import { MainService } from '../../services/main.service'; 
 import { Card } from '../../interfaces/card';
 
-
 @Component({
-  selector: 'app-card-home',
-  templateUrl: './card-home.component.html',
+  selector: 'app-card',
+  templateUrl: './card.component.html',
   styleUrls: [
-    './card-home.component.scss',
+    './card.component.scss',
     '../../scss/card.scss'
   ]
 })
+export class CardComponent {
 
-export class CardHomeComponent{
   @Input() card!:Card
 
   constructor( private mainService:MainService ){}
@@ -20,4 +19,5 @@ export class CardHomeComponent{
   get getName(){
     return this.mainService.giveName()
   }
+
 }

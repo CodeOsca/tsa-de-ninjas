@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service'; 
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { MovilCoverService } from '../../shared/services/movil-covers.service';
+import { movilCovers, movilCovers2 } from '../../../constants/movil-covers.constant';
 
 @Component({
   selector: 'app-mobile-covers',
@@ -19,8 +19,7 @@ export class MobileCoversComponent {
 
   constructor(
     private mainService:MainService,
-    private metaDataService: MetaDataService,
-    private movilCoverService:MovilCoverService
+    private metaDataService: MetaDataService
   ){
     this.mainService.scrollZero()
     this.setProducts()
@@ -42,11 +41,11 @@ export class MobileCoversComponent {
   }
 
   setProducts(){
-    this.coversMoviles = this.movilCoverService.movilCovers
+    this.coversMoviles = movilCovers
   }
 
   incrementsProducts(){
-    this.coversMoviles = this.coversMoviles.concat(this.movilCoverService.movilCovers2)
+    this.coversMoviles = this.coversMoviles.concat(movilCovers2)
   }
 
   toggleButton():void{

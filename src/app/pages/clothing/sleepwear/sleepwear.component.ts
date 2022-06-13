@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { SleepWearService } from '../../shared/services/sleepwear.service';
+import { sleepWears } from '../../../constants/sleepwear.constant';
 
 @Component({
   selector: 'app-sleepwear',
@@ -17,8 +17,7 @@ export class SleepwearComponent {
 
   constructor(
     private mainService: MainService,
-    private metaDataService: MetaDataService,
-    private sleepWearService: SleepWearService
+    private metaDataService: MetaDataService
   ) {
     this.setProducts()
     this.mainService.scrollZero()
@@ -39,6 +38,6 @@ export class SleepwearComponent {
   }
 
   setProducts(){
-    this.sleepwears = this.sleepWearService.sleepWears
+    this.sleepwears = sleepWears
   }
 }

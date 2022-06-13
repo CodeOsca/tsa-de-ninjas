@@ -19,7 +19,7 @@ export class StarsComponent  {
       subtitle:'Compralo ahora',
       link:'/ropa/camisetas',
       imgUrl:'./assets/img/user-ninja-solid.svg',
-      product:true
+      isProduct:true
     }
   ]
 

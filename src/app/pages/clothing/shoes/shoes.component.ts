@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { ShoesService } from '../../shared/services/shoes.service';
+import { shoes } from '../../../constants/shoes.constant';
 
 @Component({
   selector: 'app-shoes',
@@ -17,8 +17,7 @@ export class ShoesComponent {
 
   constructor(
     private mainService: MainService,
-    private metaDataService: MetaDataService,
-    private shoesSevice: ShoesService
+    private metaDataService: MetaDataService
   ) {
     this.setProducts()
     this.mainService.scrollZero()
@@ -39,6 +38,6 @@ export class ShoesComponent {
   }
 
   setProducts(){
-    this.shoes = this.shoesSevice.shoes
+    this.shoes = shoes
   }
 }

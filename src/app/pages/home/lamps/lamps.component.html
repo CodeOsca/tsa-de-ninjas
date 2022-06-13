@@ -22,7 +22,8 @@
         </p>
     </div>
 
-    <app-card-home *ngFor="let lamp of lamps" [card]="lamp"></app-card-home>
+    <app-card *ngFor="let lamp of lamps" [card]="lamp"></app-card>
+
 
     <div class="full-grid text-c" [hidden]="hiddenutton">
         <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>

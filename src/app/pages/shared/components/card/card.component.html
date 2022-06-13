@@ -3,14 +3,12 @@
         <img [src]="card.imgUrl" [alt]="card.title + getName">
     </mat-card-header>
 
-    <mat-card-title> {{ card.title + ' ' + getName }} </mat-card-title>
+    <mat-card-title> {{ card.title }} </mat-card-title>
 
     <mat-card-subtitle class="text-c"> {{ card.subtitle }} </mat-card-subtitle>
 
-    <mat-card-content *ngIf="card.content">{{ card.content }} </mat-card-content>
-
     <mat-card-actions>
-        <a mat-raised-button [routerLink]="card.link" color="primary">Ver {{ card.title }}</a>
+        <a mat-raised-button rel="nofollow" [href]="card.link" target="_blank" color="primary">Ver Detalles </a>
     </mat-card-actions>
 
 </mat-card>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { AwordsService } from '../../shared/services/awords.service';
+import { awords, awords2 } from '../../../constants/awords.constant';
 
 @Component({
   selector: 'app-awords',
@@ -18,8 +18,7 @@ export class AwordsComponent {
 
   constructor(
     private mainService: MainService,
-    private metaDataService: MetaDataService,
-    private awordsService: AwordsService
+    private metaDataService: MetaDataService
   ) {
     this.mainService.scrollZero()
     this.setProducts()
@@ -41,11 +40,11 @@ export class AwordsComponent {
   }
 
   setProducts():void{
-    this.awords = this.awordsService.awords
+    this.awords = awords
   }
 
   incrementsProducts():void{
-    this.awords = this.awords.concat(this.awordsService.awords2)
+    this.awords = this.awords.concat(awords2)
   }
 
   toggleButton():void{

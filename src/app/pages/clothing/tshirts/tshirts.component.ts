@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { TshirtService } from '../../shared/services/tshirts.service';
+import { tshirts, tshirts2 } from '../../../constants/tshirts.constant';
 
 
 @Component({
@@ -19,8 +19,7 @@ export class TshirtsComponent {
 
   constructor(
     private mainService: MainService,
-    private metaDataService: MetaDataService,
-    private tshirtService:TshirtService
+    private metaDataService: MetaDataService
     ) {
       this.mainService.scrollZero()
       this.setProducts()
@@ -42,11 +41,11 @@ export class TshirtsComponent {
   }
 
   setProducts():void{
-    this.tsShirts = this.tshirtService.tshirts
+    this.tsShirts = tshirts
   }
 
   incrementsProducts():void{
-    this.tsShirts = this.tsShirts.concat(this.tshirtService.tshirts2)
+    this.tsShirts = this.tsShirts.concat(tshirts2)
   }
 
   toggleButton():void{

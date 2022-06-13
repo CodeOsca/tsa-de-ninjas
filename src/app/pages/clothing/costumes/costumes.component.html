@@ -22,7 +22,7 @@
         </p>
     </div>
 
-    <app-card-home *ngFor="let costume of costumes" [card]="costume"></app-card-home>
+    <app-card *ngFor="let costume of costumes" [card]="costume"></app-card>
 
     <div class="full-grid text-c" [hidden]="hiddenutton">
         <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>

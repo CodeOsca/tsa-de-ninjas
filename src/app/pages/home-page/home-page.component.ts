@@ -19,7 +19,7 @@ export class HomePageComponent {
       content:'No solo te cubrirán del sol, si no que te harán lucir de una forma espectacula, Porque así son estas sudaderas',
       link:'/ropa/sudaderas',
       imgUrl:'https://m.media-amazon.com/images/I/61VQhA3Fs+L._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
 
     {
@@ -28,7 +28,7 @@ export class HomePageComponent {
       content:'Por más cambios que sufra la moda actual, estas camisetas siempre relucirán',
       link:'/ropa/camisetas',
       imgUrl:'https://m.media-amazon.com/images/I/61t2y+uAo4L._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
 
     {
@@ -37,7 +37,7 @@ export class HomePageComponent {
       content:'Para todo camino y lucir genial, mejor que estos zapatos no vas a encontrar nada',
       link:'/ropa/zapatos',
       imgUrl:'https://m.media-amazon.com/images/I/51408jBqJpL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
 
     {
@@ -46,7 +46,7 @@ export class HomePageComponent {
       content:'Dormir con tranquilidad y con ganas de luchar, eso es lo que pasa cuando usas estas pijamas',
       link:'/ropa/pijamas',
       imgUrl:'https://m.media-amazon.com/images/I/91g-ATYoBOL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
 
     {
@@ -55,7 +55,7 @@ export class HomePageComponent {
       content:'La fantasía es traída a la vida, cuando se trata de un disfraz de ninja muy realista',
       link:'/ropa/disfraces',
       imgUrl:'https://m.media-amazon.com/images/I/71DgAGasAdL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     }
   ]
 
@@ -66,7 +66,7 @@ export class HomePageComponent {
       content:'Causales miedo con tan solo una vista y luce misterioso con estas máscaras de ninjas',
       link:'/accesorios/mascaras',
       imgUrl:'https://m.media-amazon.com/images/I/51LumusnOsL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
 
     {
@@ -75,7 +75,7 @@ export class HomePageComponent {
       content:'El arte de las katana es lo principal, y con esto los objetivos con Cristo rey llevar',
       link:'/accesorios/espadas',
       imgUrl:'https://m.media-amazon.com/images/I/414eKr5EFuL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
 
     {
@@ -84,7 +84,7 @@ export class HomePageComponent {
       content:'A pesar de que le des muchos coñazos la funda sigue aguantando',
       link:'/accesorios/fundas-moviles',
       imgUrl:'https://m.media-amazon.com/images/I/31QYEBOqtzL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
 
   ]
@@ -97,7 +97,7 @@ export class HomePageComponent {
       content:`No pierdas más tiempo en comprar tu lámpara ${this.getName.replace('s','')}, ella será tu mejor amiga.`,
       link:'/hogar/lamparas',
       imgUrl:'https://m.media-amazon.com/images/I/51QojoYXTRL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
   
     {
@@ -106,7 +106,7 @@ export class HomePageComponent {
       content:`Compra sábanas ${this.getName.slice(3).replace('s','')}, es hora de mimir con sábanas que cumplan tus estándares de diseño y tema.`,
       link:'/hogar/sabanas',
       imgUrl:'https://m.media-amazon.com/images/I/811pQi8fQUL._AC_UL320_.jpg',
-      product:false
+      isProduct:false
     },
   ]
 

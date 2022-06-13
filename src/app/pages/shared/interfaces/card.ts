@@ -4,5 +4,5 @@ export interface Card {
     subtitle:string
     content?:string
     link:string
-    product:boolean
+    isProduct:boolean
 }

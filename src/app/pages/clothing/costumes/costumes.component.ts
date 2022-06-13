@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { CostumesService } from '../../shared/services/costumes.service';
+import { costumes, costumes2 } from '../../../constants/costumes.constant';
 
 @Component({
   selector: 'app-custumes',
@@ -18,8 +18,7 @@ export class CostumesComponent implements OnInit {
 
   constructor(
     private mainService: MainService,
-    private metaDataService: MetaDataService,
-    private costumesService: CostumesService
+    private metaDataService: MetaDataService
   ) {
     this.mainService.scrollZero()
     this.setProducts()
@@ -41,11 +40,11 @@ export class CostumesComponent implements OnInit {
   }
 
   setProducts():void{
-    this.costumes = this.costumesService.costumes
+    this.costumes = costumes
   }
 
   incrementsProducts():void{
-    this.costumes = this.costumes.concat(this.costumesService.costumes2)
+    this.costumes = this.costumes.concat(costumes2)
   }
 
   toggleButton():void{

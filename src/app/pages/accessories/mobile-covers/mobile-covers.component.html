@@ -20,7 +20,7 @@
         <p>Estas fundas son la mejor defensa “antiputasos” para tu teléfono.</p>
     </div>
 
-    <app-card-home *ngFor="let coversMovile of coversMoviles" [card]="coversMovile"></app-card-home>
+    <app-card *ngFor="let coversMovile of coversMoviles" [card]="coversMovile"></app-card>
 
     <div class="full-grid text-c" [hidden]="hiddenutton">
         <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>

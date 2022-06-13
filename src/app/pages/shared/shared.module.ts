@@ -5,13 +5,16 @@ import { RouterModule } from '@angular/router';
 
 
 import { CardHomeComponent } from './components/card-home/card-home.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
-    CardHomeComponent
+    CardHomeComponent,
+    CardComponent,
   ],
   exports:[
-    CardHomeComponent
+    CardHomeComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

@@ -22,7 +22,7 @@
             Máscaras tradicionales {{ getName.slice(3).replace('s','') }}.
         </p>
     </div>
-    <app-card-home *ngFor="let mask of masks" [card]="mask"></app-card-home>
+    <app-card *ngFor="let mask of masks" [card]="mask"></app-card>
 </section>
 
 

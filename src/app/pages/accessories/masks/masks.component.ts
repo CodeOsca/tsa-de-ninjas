@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service'; 
-import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { MasksService } from '../../shared/services/masks.service';
+import { masks } from '../../../constants/masks.constant';
 
 @Component({
   selector: 'app-masks',
@@ -18,8 +17,7 @@ export class MasksComponent {
 
   constructor(
     private mainService:MainService,
-    private metaDataService: MetaDataService,
-    private masksService:MasksService
+    private metaDataService: MetaDataService
   ){
     this.mainService.scrollZero()
     this.setProducts()
@@ -40,6 +38,6 @@ export class MasksComponent {
   }
 
   setProducts():void{
-    this.masks = this.masksService.masks
+    this.masks = masks
   }
 }

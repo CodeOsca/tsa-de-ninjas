@@ -24,7 +24,7 @@
         <p style="margin-bottom: 0 !important;">No solo te protegeras del sol, si no que serás el más perron.</p>
     </div>
 
-    <app-card-home *ngFor="let sweatShirt of sweatShirts" [card]="sweatShirt"></app-card-home>
+    <app-card *ngFor="let sweatShirt of sweatShirts" [card]="sweatShirt"></app-card>
 
     <div class="full-grid text-c" [hidden]="hiddenutton">
         <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>

@@ -2,7 +2,7 @@ import { Component, OnInit  } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { LampsService } from '../../shared/services/lamps.service';
+import { lamps, lamps2 } from '../../../constants/lamps.constant';
 
 @Component({
   selector: 'app-lamps',
@@ -18,8 +18,7 @@ export class LampsComponent implements OnInit {
 
   constructor(
     private mainService: MainService,
-    private metaDataService: MetaDataService,
-    private lampsService: LampsService
+    private metaDataService: MetaDataService
   ) {
     this.mainService.scrollZero()
     this.setProducts()
@@ -41,11 +40,11 @@ export class LampsComponent implements OnInit {
   }
 
   setProducts(){
-    this.lamps = this.lampsService.lamps
+    this.lamps = lamps
   }
 
   incrementsProducts(){
-    this.lamps = this.lamps.concat(this.lampsService.lamps2)
+    this.lamps = this.lamps.concat(lamps2)
   }
 
   toggleButton():void{
