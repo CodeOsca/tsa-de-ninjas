@@ -162,8 +162,9 @@
               "serverTarget": "TSA:server:production"
             },
             "development": {
-              "browserTarget": "TSA:build:development",
-              "serverTarget": "TSA:server:development"
+              "serverTarget": "TSA:server:development",
+              "browserTarget": "TSA:build:development"
+              
             }
           },
           "defaultConfiguration": "production"
