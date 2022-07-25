@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
-import { Title } from '@angular/platform-browser';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { sheets, sheets2 } from '../../../constants/sheets.constant';
+import { sheets2 } from '../../../constants/sheets.constant';
 
 @Component({
   selector: 'app-sheets',
@@ -19,11 +18,9 @@ export class SheetsComponent implements OnInit {
 
   constructor(
     private mainService: MainService,
-    private metaDataService: MetaDataService,
-    private title: Title
+    private metaDataService: MetaDataService
   ) {
     this.mainService.scrollZero()
-    this.setProducts()
     this.toggleButton()
   }
 
@@ -41,12 +38,8 @@ export class SheetsComponent implements OnInit {
     return this.mainService.giveName()
   }
 
-  setProducts():void{
-    this.sheets = sheets
-  }
-
   incrementsProducts():void{
-    this.sheets = this.sheets.concat(sheets2)
+    this.sheets = sheets2
   }
 
   toggleButton():void{

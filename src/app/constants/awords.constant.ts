@@ -1,48 +1,6 @@
 import { Card } from '../pages/shared/interfaces/card';
 
 
-export const awords: Card[] = [
-    {
-        title: 'WIDMAN Katana Japonesa',
-        subtitle: 'Corta con Funda Cualquier día, color/modelo surtido',
-        imgUrl: 'https://m.media-amazon.com/images/I/710kyf85kmL._AC_UL320_.jpg',
-        isProduct: true,
-        link: 'https://www.amazon.es/WIDMAN-Katana-Japonesa-Corta-Cualquier/dp/B004X5I6MM/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309TD01PI49YZ&keywords=espada+ninja&qid=1644622013&sprefix=espada+ninjas%2Caps%2C706&sr=8-1'
-    },
-
-    {
-        title: 'Espada de Espuma Gomaespuma de Ninja Niños',
-        subtitle: 'Katara 1771 - 55cm de Largo, Negro',
-        imgUrl: 'https://m.media-amazon.com/images/I/71g+-KMSIHL._AC_UL320_.jpg',
-        isProduct: true,
-        link: 'https://www.amazon.es/Katara-1771-Espada-Espuma-Gomaespuma/dp/B078D7MH9L/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309TD01PI49YZ&keywords=espada+ninja&qid=1644622013&sprefix=espada+ninjas%2Caps%2C706&sr=8-2'
-    },
-
-    {
-        title: "Juego Marca Rubie'S",
-        subtitle: 'Armas de Deadpool para Adulto - Talla única',
-        imgUrl: 'https://m.media-amazon.com/images/I/81uTDZuQL+L._AC_UL320_.jpg',
-        isProduct: true,
-        link: 'https://www.amazon.es/Juego-Marca-RubieS-Deadpool-Adulto/dp/B00MWQLODW/ref=sr_1_4?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309TD01PI49YZ&keywords=espada+ninja&qid=1644622013&sprefix=espada+ninjas%2Caps%2C706&sr=8-4'
-    },
-
-    {
-        title: 'Liontouch 29500LT Espada de Juguete de Espuma samurái para niños',
-        subtitle: 'Forma Parte de la línea de Disfraces para niños',
-        imgUrl: 'https://m.media-amazon.com/images/I/81xX1ULUf0L._AC_UL320_.jpg',
-        isProduct: true,
-        link: 'https://www.amazon.es/Liontouch-29500LT-Juguete-samur%C3%A1i-Disfraces/dp/B07J6QKYNH/ref=sr_1_6?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309TD01PI49YZ&keywords=espada+ninja&qid=1644622013&sprefix=espada+ninjas%2Caps%2C706&sr=8-6'
-    },
-
-    {
-        title: 'My Other Me Me Me',
-        subtitle: 'Ninja Armas Espada, Multicolor (206011)',
-        imgUrl: 'https://m.media-amazon.com/images/I/414eKr5EFuL._AC_UL320_.jpg',
-        isProduct: true,
-        link: 'https://www.amazon.es/My-Other-Me-Multicolor-206011/dp/B07CNR8TQ7/ref=sr_1_7?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309TD01PI49YZ&keywords=espada+ninja&qid=1644622013&sprefix=espada+ninjas%2Caps%2C706&sr=8-7'
-    },
-]
-
 export const awords2: Card[] = [
     {
         title: 'Liontouch 50000LT Espada de Juguete de Espuma vikinga para niños, roja',

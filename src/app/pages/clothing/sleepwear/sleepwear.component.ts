@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { sleepWears } from '../../../constants/sleepwear.constant';
 
 @Component({
   selector: 'app-sleepwear',
@@ -13,13 +11,11 @@ import { sleepWears } from '../../../constants/sleepwear.constant';
   ]
 })
 export class SleepwearComponent {
-  sleepwears: Card[] = []
-
+  
   constructor(
     private mainService: MainService,
     private metaDataService: MetaDataService
   ) {
-    this.setProducts()
     this.mainService.scrollZero()
   }
 
@@ -29,15 +25,11 @@ export class SleepwearComponent {
       title: t,
       description: `La tela suave del pijama ${this.getName.slice(3).replace('s', '')} en definitiva te gustara, lo mejor en pijamas para adquirir mucho sueño dormir más`,
       slug: `${this.mainService.nameSite}/ropa/pijamas`,
-      image: this.sleepwears[0].imgUrl
+      image: 'https://m.media-amazon.com/images/I/51QyPXpGdXL._AC_UL320_.jpg'
     })
   }
 
   get getName() {
     return this.mainService.giveName()
-  }
-
-  setProducts(){
-    this.sleepwears = sleepWears
   }
 }

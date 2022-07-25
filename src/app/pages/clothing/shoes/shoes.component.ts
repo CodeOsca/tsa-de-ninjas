@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { shoes } from '../../../constants/shoes.constant';
 
 @Component({
   selector: 'app-shoes',
@@ -13,13 +11,10 @@ import { shoes } from '../../../constants/shoes.constant';
   ]
 })
 export class ShoesComponent {
-  shoes: Card[] = []
-
   constructor(
     private mainService: MainService,
     private metaDataService: MetaDataService
   ) {
-    this.setProducts()
     this.mainService.scrollZero()
   }
 
@@ -35,9 +30,5 @@ export class ShoesComponent {
 
   get getName() {
     return this.mainService.giveName()
-  }
-
-  setProducts(){
-    this.shoes = shoes
   }
 }

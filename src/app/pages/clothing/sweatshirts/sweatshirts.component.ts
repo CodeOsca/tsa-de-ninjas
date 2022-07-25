@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { sweeatsHirts, sweeatsHirts2 } from '../../../constants/sweeatshirts.constant';
+import { sweeatsHirts2 } from '../../../constants/sweeatshirts.constant';
 
 @Component({
   selector: 'app-sweatshirts',
@@ -21,7 +21,6 @@ export class SweatshirtsComponent {
     private metaDataService: MetaDataService
   ) {
     this.mainService.scrollZero()
-    this.setProducts()
     this.toggleButton()
   }
 
@@ -41,10 +40,6 @@ export class SweatshirtsComponent {
 
   get nameSite(){
     return this.mainService.nameSite
-  }
-
-  setProducts():void{
-    this.sweatShirts = sweeatsHirts
   }
 
   incrementsProducts():void{

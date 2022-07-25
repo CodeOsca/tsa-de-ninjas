@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { awords, awords2 } from '../../../constants/awords.constant';
+import { awords2 } from '../../../constants/awords.constant';
 
 @Component({
   selector: 'app-awords',
@@ -21,7 +21,6 @@ export class AwordsComponent {
     private metaDataService: MetaDataService
   ) {
     this.mainService.scrollZero()
-    this.setProducts()
     this.toggleButton()
   }
 
@@ -31,7 +30,7 @@ export class AwordsComponent {
       title: t,
       description: `El arte del arte, la disciplina de la espada, el punto de combate principal, la habilidad de pelear con espadas ${this.getName.slice(3).replace('s', '')}`,
       slug: `${this.mainService.nameSite}/accesorios/espadas`,
-      image: this.awords[0].imgUrl
+      image: 'https://www.amazon.es/WIDMAN-Katana-Japonesa-Corta-Cualquier/dp/B004X5I6MM/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=309TD01PI49YZ&keywords=espada+ninja&qid=1644622013&sprefix=espada+ninjas%2Caps%2C706&sr=8-1'
     })
   }
 
@@ -39,12 +38,8 @@ export class AwordsComponent {
     return this.mainService.giveName()
   }
 
-  setProducts():void{
-    this.awords = awords
-  }
-
   incrementsProducts():void{
-    this.awords = this.awords.concat(awords2)
+    this.awords = awords2
   }
 
   toggleButton():void{

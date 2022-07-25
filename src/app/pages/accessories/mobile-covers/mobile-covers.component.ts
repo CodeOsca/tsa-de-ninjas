@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service'; 
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { movilCovers, movilCovers2 } from '../../../constants/movil-covers.constant';
+import { movilCovers2 } from '../../../constants/movil-covers.constant';
 
 @Component({
   selector: 'app-mobile-covers',
@@ -22,7 +22,6 @@ export class MobileCoversComponent {
     private metaDataService: MetaDataService
   ){
     this.mainService.scrollZero()
-    this.setProducts()
     this.toggleButton()
   }
 
@@ -32,7 +31,7 @@ export class MobileCoversComponent {
       title:t,
       description:`Estas fundas protegerán tu teléfono contra todo tipo de golpes, claro que eso no significa que vayas a darle coñazos a tu móvil solo para probarlos`,
       slug:`${this.mainService.nameSite}/accesorios/fundas-moviles`,
-      image:this.coversMoviles[0].imgUrl
+      image: 'https://m.media-amazon.com/images/I/411tWNiLP6L._AC_UL320_.jpg'
     })
   }
 
@@ -40,12 +39,8 @@ export class MobileCoversComponent {
     return this.mainService.giveName()
   }
 
-  setProducts(){
-    this.coversMoviles = movilCovers
-  }
-
   incrementsProducts(){
-    this.coversMoviles = this.coversMoviles.concat(movilCovers2)
+    this.coversMoviles = movilCovers2
   }
 
   toggleButton():void{

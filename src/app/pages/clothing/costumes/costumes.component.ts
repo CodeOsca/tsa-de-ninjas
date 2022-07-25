@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { costumes, costumes2 } from '../../../constants/costumes.constant';
+import { costumes2 } from '../../../constants/costumes.constant';
 
 @Component({
   selector: 'app-custumes',
@@ -21,7 +21,6 @@ export class CostumesComponent implements OnInit {
     private metaDataService: MetaDataService
   ) {
     this.mainService.scrollZero()
-    this.setProducts()
     this.toggleButton()
   }
 
@@ -39,12 +38,8 @@ export class CostumesComponent implements OnInit {
     return this.mainService.giveName()
   }
 
-  setProducts():void{
-    this.costumes = costumes
-  }
-
   incrementsProducts():void{
-    this.costumes = this.costumes.concat(costumes2)
+    this.costumes = costumes2
   }
 
   toggleButton():void{

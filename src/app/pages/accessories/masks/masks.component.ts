@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Card } from '../../shared/interfaces/card';
 import { MainService } from '../../shared/services/main.service'; 
 import { MetaDataService } from '../../shared/services/meta-data.service';
-import { masks } from '../../../constants/masks.constant';
 
 @Component({
   selector: 'app-masks',
@@ -13,14 +11,12 @@ import { masks } from '../../../constants/masks.constant';
     ]
 })
 export class MasksComponent {
-  masks:Card[] = []
 
   constructor(
     private mainService:MainService,
     private metaDataService: MetaDataService
   ){
     this.mainService.scrollZero()
-    this.setProducts()
   }
 
   ngOnInit(): void {
@@ -29,7 +25,7 @@ export class MasksComponent {
       title:t,
       description:`No permitas que nadie conozca tu verdadera identidad, esto es posible gracias a las máscaras ${this.getName.slice(3).replace('s','')}`,
       slug:`${this.mainService.nameSite}/accesorios/mascaras`,
-      image:this.masks[0].imgUrl
+      image: 'https://m.media-amazon.com/images/I/71uomCx3p9S._AC_UL320_.jpg'
     })
   }
 
@@ -37,7 +33,4 @@ export class MasksComponent {
     return this.mainService.giveName()
   }
 
-  setProducts():void{
-    this.masks = masks
-  }
 }

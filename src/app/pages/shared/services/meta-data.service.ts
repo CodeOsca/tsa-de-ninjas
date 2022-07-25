@@ -13,7 +13,7 @@ export class MetaDataService {
     ){}
 
   generateTags(config:MetaTag){
-    this.title.setTitle(config.title)
+    this.title.setTitle(`${config.title} DeNinjas`)
     this.meta.updateTag({name:'description', content:config.description })
     this.meta.updateTag({ property:'og:type', content:'article' })
     this.meta.updateTag({ property:'og:site_name', content:'DeNinjas' })
