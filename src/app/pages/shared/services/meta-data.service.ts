@@ -26,4 +26,8 @@ export class MetaDataService {
   generateNoIndex(){
     this.meta.addTag({name:'robots', content:'noindex' })
   }
+
+  get nameSite():string{
+    return 'deninjas.store'
+  }
 }

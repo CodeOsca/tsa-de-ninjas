@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MetaDataService } from '../shared/services/meta-data.service';
-import { MainService } from '../shared/services/main.service'; 
 import { Card } from '../shared/interfaces/card';
 
 @Component({
@@ -94,7 +93,7 @@ export class HomePageComponent {
     {
       title:'Lámparas',
       subtitle:'Compralo ahora',
-      content:`No pierdas más tiempo en comprar tu lámpara ${this.getName.replace('s','')}, ella será tu mejor amiga.`,
+      content:`No pierdas más tiempo en comprar tu lámpara de ninja, ella será tu mejor amiga.`,
       link:'/hogar/lamparas',
       imgUrl:'https://m.media-amazon.com/images/I/51QojoYXTRL._AC_UL320_.jpg',
       isProduct:false
@@ -103,28 +102,22 @@ export class HomePageComponent {
     {
       title:'Sábanas',
       subtitle:'Compralo ahora',
-      content:`Compra sábanas ${this.getName.slice(3).replace('s','')}, es hora de mimir con sábanas que cumplan tus estándares de diseño y tema.`,
+      content:`Compra sábanas ninja, es hora de mimir con sábanas que cumplan tus estándares de diseño y tema.`,
       link:'/hogar/sabanas',
       imgUrl:'https://m.media-amazon.com/images/I/811pQi8fQUL._AC_UL320_.jpg',
       isProduct:false
     },
   ]
 
-  constructor(
-    private mainService:MainService,
-    private metaDataService:MetaDataService
-  ){}
+  constructor( private metaDataService:MetaDataService ){}
 
-  get getName(){
-    return this.mainService.giveName()
-  }
 
   ngOnInit(): void {
-    let t:string = `Tienda online de productos ${this.getName}`
+    let t:string = `Tienda online de productos de ninjas`
     this.metaDataService.generateTags({
       title:t,
-      description:`Tenemos una serie de productos ${this.getName}, tales como camisetas, sudaderas, vestimenta, disfraces, fundas móviles, lámparas, sabanas y mucho más a buen precio y calidad`,
-      slug:`${this.mainService.nameSite}` ,
+      description:`Tenemos una serie de productos de ninjas, tales como camisetas, sudaderas, vestimenta, disfraces, fundas móviles, lámparas, sabanas y mucho más a buen precio y calidad`,
+      slug:`${this.metaDataService.nameSite}` ,
       image:"https://m.media-amazon.com/images/I/61gFnOvYnJL._AC_UL320_.jpg"
     })
   }

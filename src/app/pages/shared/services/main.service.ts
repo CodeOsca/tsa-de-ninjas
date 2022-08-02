@@ -18,7 +18,4 @@ export class MainService {
     }
   }
 
-  get nameSite():string{
-    return 'deninjas.store'
-  }
 }

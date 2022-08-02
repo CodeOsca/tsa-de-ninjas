@@ -1,6 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
-import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { lamps2 } from '../../../constants/lamps.constant';
 
@@ -13,29 +12,18 @@ import { lamps2 } from '../../../constants/lamps.constant';
   ]
 })
 export class LampsComponent implements OnInit {
-  hiddenutton:boolean = true
+  hiddenutton:boolean = false
   lamps: Card[] = []
 
-  constructor(
-    private mainService: MainService,
-    private metaDataService: MetaDataService
-  ) {
-    this.mainService.scrollZero()
-    this.toggleButton()
-  }
+  constructor( private metaDataService: MetaDataService) {}
 
   ngOnInit(): void {
-    let t: string = `Lámparas ${this.getName}`
     this.metaDataService.generateTags({
-      title: t,
-      description: `Súper Lámparas ${this.getName} de buena calidad, con un precio barato y con estilo único en su clase`,
-      slug: `${this.mainService.nameSite}/hogar/lamparas`,
+      title: 'Lámparas de ninjas',
+      description: 'Lámparas ninjas de buen precio, calidad y con estilo único en su clase',
+      slug: `${this.metaDataService.nameSite}/hogar/lamparas`,
       image: 'https://m.media-amazon.com/images/I/51QojoYXTRL._AC_UL320_.jpg'
     })
-  }
-
-  get getName() {
-    return this.mainService.giveName()
   }
 
   incrementsProducts(){

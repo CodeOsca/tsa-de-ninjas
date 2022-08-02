@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SheetsComponent } from './sheets/sheets.component';
 import { LampsComponent } from './lamps/lamps.component';
+import { MugsComponent } from './mugs/mugs.component';
 
 const routes: Routes = [
     {
@@ -9,6 +10,7 @@ const routes: Routes = [
         children:[
             { path:'sabanas', component:SheetsComponent },
             { path:'lamparas', component:LampsComponent },
+            { path:'tazas', component:MugsComponent },
             { path:'**', redirectTo:'/404' }
         ]
     }

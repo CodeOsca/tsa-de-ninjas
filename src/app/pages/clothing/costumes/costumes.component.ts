@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
-import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { costumes2 } from '../../../constants/costumes.constant';
 
@@ -13,29 +12,18 @@ import { costumes2 } from '../../../constants/costumes.constant';
   ]
 })
 export class CostumesComponent implements OnInit {
-  hiddenutton:boolean = true
+  hiddenutton:boolean = false
   costumes: Card[] = []
 
-  constructor(
-    private mainService: MainService,
-    private metaDataService: MetaDataService
-  ) {
-    this.mainService.scrollZero()
-    this.toggleButton()
-  }
+  constructor( private metaDataService: MetaDataService ){}
 
   ngOnInit(): void {
-    let t: string = `Disfraces ${this.getName}`
     this.metaDataService.generateTags({
-      title: t,
-      description: `Excelentes disfraces ${this.getName}, nadie sabrá si eres real o una copia, tenemos buenos precios y una calidad increíble`,
-      slug: `${this.mainService.nameSite}/ropa/disfraces`,
+      title: 'Disfraces ninja',
+      description: `Excelentes disfraces ninja, nadie sabrá si eres real o una copia, tenemos buenos precios y una calidad increíble`,
+      slug: `${this.metaDataService.nameSite}/ropa/disfraces`,
       image: 'https://m.media-amazon.com/images/I/71FUYP95kCL._AC_UL320_.jpg'
     })
-  }
-
-  get getName():string {
-    return this.mainService.giveName()
   }
 
   incrementsProducts():void{

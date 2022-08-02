@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
-import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { sweeatsHirts2 } from '../../../constants/sweeatshirts.constant';
 
@@ -13,33 +12,18 @@ import { sweeatsHirts2 } from '../../../constants/sweeatshirts.constant';
   ]
 })
 export class SweatshirtsComponent {
-  hiddenutton:boolean = true
+  hiddenutton:boolean = false
   sweatShirts: Card[] = []
 
-  constructor(
-    private mainService: MainService,
-    private metaDataService: MetaDataService
-  ) {
-    this.mainService.scrollZero()
-    this.toggleButton()
-  }
+  constructor( private metaDataService: MetaDataService) {}
 
   ngOnInit(): void {
-    let t: string = `Sudaderas ${this.getName}`
     this.metaDataService.generateTags({
-      title: t,
-      description: `Hoy te traemos las mejores sudaderas ${this.getName} que puedes encontrar en todo del mercado para ${this.getName.slice(3)}`,
-      slug: `${this.mainService.nameSite}/ropa/sudaderas`,
+      title: 'Sudaderas de ninjas',
+      description: `Vendemos las mejores sudaderas de ninjas que puedes encontrar en todo del mercado para sudaderas`,
+      slug: `${this.metaDataService.nameSite}/ropa/sudaderas`,
       image: 'https://m.media-amazon.com/images/I/61nT9pjqRqL._AC_UL320_.jpg'
     })
-  }
-
-  get getName():string{
-    return this.mainService.giveName()
-  }
-
-  get nameSite(){
-    return this.mainService.nameSite
   }
 
   incrementsProducts():void{

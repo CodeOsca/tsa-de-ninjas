@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 
 @Component({
@@ -12,24 +11,15 @@ import { MetaDataService } from '../../shared/services/meta-data.service';
 })
 export class SleepwearComponent {
   
-  constructor(
-    private mainService: MainService,
-    private metaDataService: MetaDataService
-  ) {
-    this.mainService.scrollZero()
-  }
+  constructor( private metaDataService: MetaDataService ){}
 
   ngOnInit(): void {
-    let t: string = `Pijamas ${this.getName}`
     this.metaDataService.generateTags({
-      title: t,
-      description: `La tela suave del pijama ${this.getName.slice(3).replace('s', '')} en definitiva te gustara, lo mejor en pijamas para adquirir mucho sueño dormir más`,
-      slug: `${this.mainService.nameSite}/ropa/pijamas`,
+      title: 'Pijamas ninja',
+      description: `Lo mejor en pijamas ninjas para adquirir mucho sueño y dormir más`,
+      slug: `${this.metaDataService.nameSite}/ropa/pijamas`,
       image: 'https://m.media-amazon.com/images/I/51QyPXpGdXL._AC_UL320_.jpg'
     })
   }
 
-  get getName() {
-    return this.mainService.giveName()
-  }
 }

@@ -6,22 +6,18 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 import { MasksComponent } from './masks/masks.component';
-import { StarsComponent } from './stars/stars.component';
-import { KnivesComponent } from './knives/knives.component';
 import { AwordsComponent } from './awords/awords.component';
-import { VinylComponent } from './vinyl/vinyl.component';
 import { MobileCoversComponent } from './mobile-covers/mobile-covers.component';
+import { BagsComponent } from './bags/bags.component';
 
 
 
 @NgModule({
   declarations: [
     MasksComponent,
-    StarsComponent,
-    KnivesComponent,
     AwordsComponent,
-    VinylComponent,
-    MobileCoversComponent
+    MobileCoversComponent,
+    BagsComponent
   ],
   imports: [
     CommonModule,

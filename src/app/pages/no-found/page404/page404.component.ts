@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 
 @Component({
@@ -9,20 +8,9 @@ import { MetaDataService } from '../../shared/services/meta-data.service';
 })
 
 export class Page404Component implements OnInit {
-  constructor( 
-    private mainService:MainService,
-    private metaDataService:MetaDataService
-    ){
-    mainService.scrollZero()
-  }
-
-  get nameSite():string{
-    return this.mainService.nameSite
-  }
+  constructor( private metaDataService:MetaDataService ){}
 
   ngOnInit(): void {
     this.metaDataService.generateNoIndex()
   }
-
-
 }
