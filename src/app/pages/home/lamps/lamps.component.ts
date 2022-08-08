@@ -6,10 +6,7 @@ import { lamps2 } from '../../../constants/lamps.constant';
 @Component({
   selector: 'app-lamps',
   templateUrl: './lamps.component.html',
-  styleUrls: [
-    './lamps.component.scss',
-    '../../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss']
 })
 export class LampsComponent implements OnInit {
   hiddenutton:boolean = false

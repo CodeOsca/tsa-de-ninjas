@@ -6,10 +6,7 @@ import { costumes2 } from '../../../constants/costumes.constant';
 @Component({
   selector: 'app-custumes',
   templateUrl: './costumes.component.html',
-  styleUrls: [
-    './costumes.component.scss',
-    '../../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss']
 })
 export class CostumesComponent implements OnInit {
   hiddenutton:boolean = false

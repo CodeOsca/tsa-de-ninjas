@@ -4,10 +4,7 @@ import { MetaDataService } from '../../shared/services/meta-data.service';
 @Component({
   selector: 'app-shoes',
   templateUrl: './shoes.component.html',
-  styleUrls: [
-    './shoes.component.scss',
-    '../../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss']
 })
 export class ShoesComponent {
   constructor( private metaDataService: MetaDataService ){}
@@ -20,5 +17,4 @@ export class ShoesComponent {
       image: 'https://m.media-amazon.com/images/I/51rpjpFhK7S._AC_UL320_.jpg'
     })
   }
-
 }

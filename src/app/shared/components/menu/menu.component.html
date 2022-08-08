@@ -1,16 +1,15 @@
 <mat-toolbar color="warn">
     <a routerLink="/" mat-button>
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-ninja" class="svg-inline--fa fa-user-ninja fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M325.4 289.2L224 390.6 122.6 289.2C54 295.3 0 352.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-70.2-54-127.1-122.6-133.2zM32 192c27.3 0 51.8-11.5 69.2-29.7 15.1 53.9 64 93.7 122.8 93.7 70.7 0 128-57.3 128-128S294.7 0 224 0c-50.4 0-93.6 29.4-114.5 71.8C92.1 47.8 64 32 32 32c0 33.4 17.1 62.8 43.1 80-26 17.2-43.1 46.6-43.1 80zm144-96h96c17.7 0 32 14.3 32 32H144c0-17.7 14.3-32 32-32z"></path></svg>
-        <span> {{ (getName() | titlecase).replace(' ', '') }} </span>
+        <span>DeNinjas</span>
     </a>
 
     <span class="example-spacer"></span>
 
     <button mat-button class="btn-menu hamburger hamburger--collapse" [matMenuTriggerFor]="ninjas">
         <span class="menu-test">Productos</span>
-        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
     </button>
-
 
     <mat-menu #ninjas="matMenu">
         <button class="active" mat-menu-item [matMenuTriggerFor]="Ropa">Ropa</button>
@@ -30,7 +29,7 @@
         <button mat-menu-item routerLink="/accesorios/mascaras">Máscaras</button>
         <button mat-menu-item routerLink="/accesorios/espadas">Espadas</button>
         <button mat-menu-item routerLink="/accesorios/fundas-moviles">Fundas móviles</button>
-        <button mat-menu-item routerLink="/accesorios/bolsos">Bolsos</button>
+        <button mat-menu-item routerLink="/accesorios/mochilas">Mochilas</button>
     </mat-menu>
 
     <mat-menu #Hogar="matMenu">

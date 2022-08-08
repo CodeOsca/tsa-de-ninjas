@@ -6,10 +6,7 @@ import { movilCovers2 } from '../../../constants/movil-covers.constant';
 @Component({
   selector: 'app-mobile-covers',
   templateUrl: './mobile-covers.component.html',
-  styleUrls: [
-    './mobile-covers.component.scss',
-    '../../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss']
 })
 
 export class MobileCoversComponent {

@@ -1,16 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../../shared/interfaces/card';
-import { MainService } from '../../shared/services/main.service';
 import { MetaDataService } from '../../shared/services/meta-data.service';
 import { sheets2 } from '../../../constants/sheets.constant';
 
 @Component({
   selector: 'app-sheets',
   templateUrl: './sheets.component.html',
-  styleUrls: [
-    './sheets.component.scss',
-    '../../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss']
 })
 export class SheetsComponent implements OnInit {
   hiddenutton:boolean = false

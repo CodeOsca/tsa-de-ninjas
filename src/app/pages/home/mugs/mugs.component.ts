@@ -4,9 +4,7 @@ import { MetaDataService } from '../../shared/services/meta-data.service';
 @Component({
   selector: 'app-mugs',
   templateUrl: './mugs.component.html',
-  styleUrls: [
-    './mugs.component.scss',
-    '../../shared/scss/grid-section-card.scss' ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss' ]
 })
 export class MugsComponent implements OnInit {
 
@@ -17,7 +15,7 @@ export class MugsComponent implements OnInit {
       title: 'Tazas ninjas',
       description: 'Tazas geniales con temática de ninjas al mejor precio',
       slug: `${this.metaDataService.nameSite}/hogar/tazas`,
-      image: ''
+      image: 'https://m.media-amazon.com/images/I/418XI+rlb-L._AC_UL320_.jpg'
     })
   }
 

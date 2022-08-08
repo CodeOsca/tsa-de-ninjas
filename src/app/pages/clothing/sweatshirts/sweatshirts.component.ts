@@ -6,10 +6,7 @@ import { sweeatsHirts2 } from '../../../constants/sweeatshirts.constant';
 @Component({
   selector: 'app-sweatshirts',
   templateUrl: './sweatshirts.component.html',
-  styleUrls: [
-    './sweatshirts.component.scss',
-    '../../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss']
 })
 export class SweatshirtsComponent {
   hiddenutton:boolean = false

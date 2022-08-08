@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MasksComponent } from './masks/masks.component';
 import { AwordsComponent } from './awords/awords.component';
 import { MobileCoversComponent } from './mobile-covers/mobile-covers.component';
-import { BagsComponent } from './bags/bags.component';
+import { BackPackComponent } from './back-pack/back-pack.component';
 
 
 
@@ -17,7 +17,7 @@ import { BagsComponent } from './bags/bags.component';
     MasksComponent,
     AwordsComponent,
     MobileCoversComponent,
-    BagsComponent
+    BackPackComponent
   ],
   imports: [
     CommonModule,

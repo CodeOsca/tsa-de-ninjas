@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AwordsComponent } from './awords/awords.component';
 import { MasksComponent } from './masks/masks.component';
 import { MobileCoversComponent } from './mobile-covers/mobile-covers.component';
-import { BagsComponent } from './bags/bags.component';
+import { BackPackComponent } from './back-pack/back-pack.component';
 
 const routes: Routes = [
     {
@@ -13,7 +13,7 @@ const routes: Routes = [
             { path: 'espadas', component: AwordsComponent, pathMatch:'full' },
             { path: 'mascaras', component: MasksComponent },
             { path: 'fundas-moviles', component: MobileCoversComponent },
-            { path: 'bolsos', component: BagsComponent },
+            { path: 'mochilas', component: BackPackComponent },
             { path:'**', redirectTo:'/404' }
         ]
     }

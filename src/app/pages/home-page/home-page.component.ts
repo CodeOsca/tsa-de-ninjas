@@ -5,10 +5,7 @@ import { Card } from '../shared/interfaces/card';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: [
-    './home-page.component.scss',
-    '../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../shared/scss/grid-section-card.scss']
 })
 export class HomePageComponent {
   clothings:Card[] = [

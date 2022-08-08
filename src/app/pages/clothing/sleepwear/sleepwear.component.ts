@@ -4,10 +4,7 @@ import { MetaDataService } from '../../shared/services/meta-data.service';
 @Component({
   selector: 'app-sleepwear',
   templateUrl: './sleepwear.component.html',
-  styleUrls: [
-    './sleepwear.component.scss',
-    '../../shared/scss/grid-section-card.scss'
-  ]
+  styleUrls: ['../../shared/scss/grid-section-card.scss']
 })
 export class SleepwearComponent {
   
