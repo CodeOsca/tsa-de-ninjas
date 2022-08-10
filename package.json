@@ -9,7 +9,7 @@
     "test": "ng test",
     "dev:ssr": "ng run TSA:serve-ssr",
     "serve:ssr": "node dist/TSA/server/main.js",
-     "prerender": "ng run TSA:prerender",
+    "prerender": "ng run TSA:prerender",
     "build:ssr": "ng build && ng run TSA:server"
   },
   "private": true,
