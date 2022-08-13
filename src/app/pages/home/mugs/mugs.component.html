@@ -28,46 +28,49 @@
     <app-card [card]="{
         title: 'Teeange Mutant Ninja Turtles TMNT - Taza de café, diseño de Caras desgastadas',
         subtitle: 'Taza de tortuga ninja leonardo',
-        link: 'https://www.amazon.es/Teeange-Mutant-Ninja-Turtles-TMNT/dp/B076Q51NPS/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tazas+de+ninja&qid=1659454632&sr=8-2',
+        link: 'https://amzn.to/3pgvlk7',
         imgUrl: 'https://m.media-amazon.com/images/I/418XI+rlb-L._AC_UL320_.jpg'}"></app-card>
 
     <app-card [card]="{
         title: 'ABYstyle - Naruto Shippuden - Taza - 320 ml - Ninja de Konoha',
         subtitle: 'Taza de naruto Shippuden',
-        link: 'https://www.amazon.es/ABYstyle-Naruto-Shippuden-Ninjas-Konoha/dp/B089KP2M6N/ref=sr_1_4?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tazas+de+ninja&qid=1659454632&sr=8-4',
+        link: 'https://amzn.to/3QmldSV',
         imgUrl: 'https://m.media-amazon.com/images/I/714Uc7qaB7L._AC_UL320_.jpg'}"></app-card>
 
     <app-card [card]="{
         title: 'Teenage Mutant Ninja Turtles Mug by Nickelodeon',
         subtitle: 'Taza de tortuga ninja  abdomen',
-        link: 'https://www.amazon.es/Teenage-Mutant-Ninja-Turtles-Nickelodeon/dp/B00N2NO95E/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tazas+de+ninja&qid=1659454632&sr=8-5',
+        link: 'https://amzn.to/3QEo5tP',
         imgUrl: 'https://m.media-amazon.com/images/I/51X82EcSGDL._AC_UL320_.jpg'}"></app-card>
 
-    <app-card [card]="{
-        title: 'GB Eye, Tortugas Ninja, Grid, Taza',
-        subtitle: 'Taza de tortuga ninja equipo',
-        link: 'https://www.amazon.es/Eye-Tortugas-Ninja-Grid-Taza/dp/B00SYQ1B1E/ref=sr_1_6?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tazas+de+ninja&qid=1659454632&sr=8-6',
-        imgUrl: 'https://m.media-amazon.com/images/I/51rek1u6pVL._AC_UL320_.jpg'}"></app-card>
     
     <app-card [card]="{
         title: 'Ginger Ninja Taza de cerámica de 325 ml para regalo de cumpleaños o Navidad',
         subtitle: 'Taza ninja Ginger',
-        link: 'https://www.amazon.es/cer%C3%A1mica-Ginger-regalo-cumplea%C3%B1os-Navidad/dp/B06VY25C5S/ref=sr_1_7?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tazas+de+ninja&qid=1659455765&sr=8-7',
+        link: 'https://amzn.to/3zRP2Uc',
         imgUrl: 'https://m.media-amazon.com/images/I/31UpciMuP7L._AC_UL320_.jpg'}"></app-card>
 
 
     <app-card [card]="{
         title: 'Regalo personaliseitonline - taza con Ninja Shuriken (clarias rénovation, blanco) - nombre/mensaje en su única taza - estrellas',
         subtitle: 'Taza ninja traje negro con estrella',
-        link: 'https://www.amazon.es/Regalo-personaliseitonline-Shuriken-r%C3%A9novation-estrellas/dp/B00OX3RSVO/ref=sr_1_42?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tazas+de+ninja&qid=1659455765&sr=8-42',
+        link: 'https://amzn.to/3dt0GgB',
         imgUrl: 'https://m.media-amazon.com/images/I/41C4iZQUZgL._AC_UL320_.jpg'}"></app-card>
 
-
+    
     <app-card [card]="{
-        title: 'Chiby Ninja - Taza con purpurina (330 ml)',
-        subtitle: 'Taza ninja anime',
-        link: 'https://www.amazon.es/Chiby-Ninja-Taza-purpurina-330/dp/B08SPHX3P7/ref=sr_1_39?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tazas+de+ninja&qid=1659455765&sr=8-39',
-        imgUrl: 'https://m.media-amazon.com/images/I/81971cxLxRL._AC_UL320_.jpg'}"></app-card>
+        title: 'Taza ninja de Boruto',
+        subtitle: 'ABYstyle Boruto Group - Taza (320 ml)',
+        link: 'https://amzn.to/3vZW8Vq',
+        imgUrl: 'https://m.media-amazon.com/images/I/71YICDFQe7L._AC_UL320_.jpg'}"></app-card>
+
+        <app-card *ngFor="let mug of mugs" [card]="mug"></app-card>
+
+
+
+    <div class="full-grid text-c" [hidden]="hiddenutton">
+        <button mat-raised-button color="primary" (click)="clickButton()">Ver más...</button>
+    </div>
 
 
 </section>
