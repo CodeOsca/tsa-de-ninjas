@@ -32,7 +32,45 @@
         </p>
     </div>
 
-    <app-card-home *ngFor="let clothing of clothings" [card]="clothing"></app-card-home>
+    <app-card-home [card]="{
+        title:'Sudaderas',
+        subtitle:'Compralo ahora',
+        content:'No solo te cubrirán del sol, si no que te harán lucir de una forma espectacula, Porque así son estas sudaderas',
+        link:'/ropa/sudaderas',
+        imgUrl:'https://m.media-amazon.com/images/I/61VQhA3Fs+L._AC_UL320_.jpg'
+    }"></app-card-home>
+
+    <app-card-home [card]="{
+      title:'Camisetas',
+      subtitle:'Compralo ahora',
+      content:'Por más cambios que sufra la moda actual, estas camisetas siempre relucirán',
+      link:'/ropa/camisetas',
+      imgUrl:'https://m.media-amazon.com/images/I/61t2y+uAo4L._AC_UL320_.jpg'
+    }"></app-card-home>
+
+    <app-card-home [card]="{
+        title:'Zapatos',
+        subtitle:'Compralo ahora',
+        content:'Para todo camino y lucir genial, mejor que estos zapatos no vas a encontrar nada',
+        link:'/ropa/zapatos',
+        imgUrl:'https://m.media-amazon.com/images/I/51408jBqJpL._AC_UL320_.jpg'
+      }"></app-card-home>
+
+    <app-card-home [card]="{
+      title:'Pijamas',
+      subtitle:'Compralo ahora',
+      content:'Dormir con tranquilidad y con ganas de luchar, eso es lo que pasa cuando usas estas pijamas',
+      link:'/ropa/pijamas',
+      imgUrl:'https://m.media-amazon.com/images/I/91g-ATYoBOL._AC_UL320_.jpg'
+    }"></app-card-home>
+
+    <app-card-home [card]="{
+      title:'Disfraces',
+      subtitle:'Compralo ahora',
+      content:'La fantasía es traída a la vida, cuando se trata de un disfraz de ninja muy realista',
+      link:'/ropa/disfraces',
+      imgUrl:'https://m.media-amazon.com/images/I/71DgAGasAdL._AC_UL320_.jpg'
+    }"></app-card-home>
 
     <div class="full-grid">
         <h3> Accesorios de ninjas</h3>
@@ -42,7 +80,37 @@
         </p>
     </div>
 
-    <app-card-home *ngFor="let accessorie of accessories" [card]="accessorie"></app-card-home>
+    <app-card-home [card]="{
+        title:'Máscaras',
+        subtitle:'Compralo ahora',
+        content:'Causales miedo con tan solo una vista y luce misterioso con estas máscaras de ninjas',
+        link:'/accesorios/mascaras',
+        imgUrl:'https://m.media-amazon.com/images/I/51LumusnOsL._AC_UL320_.jpg'
+      }"></app-card-home>
+
+    <app-card-home [card]="{
+      title:'Espadas',
+      subtitle:'Compralo ahora',
+      content:'El arte de las katana es lo principal, y con esto los objetivos con Cristo rey llevar',
+      link:'/accesorios/espadas',
+      imgUrl:'https://m.media-amazon.com/images/I/414eKr5EFuL._AC_UL320_.jpg'
+    }"></app-card-home>
+
+    <app-card-home [card]="{
+        title:'Fundas móviles',
+        subtitle:'Compralo ahora',
+        content:'A pesar de que le des muchos coñazos la funda sigue aguantando',
+        link:'/accesorios/fundas-moviles',
+        imgUrl:'https://m.media-amazon.com/images/I/31QYEBOqtzL._AC_UL320_.jpg'
+      }"></app-card-home>
+
+    <app-card-home [card]="{
+        title:'Mochilas',
+        subtitle:'Compralo ahora',
+        content:'Muestra una actitud genial con tu mochila pavita',
+        link:'/accesorios/mochilas',
+        imgUrl:'https://m.media-amazon.com/images/I/71e5aIlhUhL._AC_UL320_.jpg'
+      }"></app-card-home>
 
     <div class="full-grid">
         <h3> Artículos domésticos para el hogar de ninjas</h3>
@@ -52,7 +120,30 @@
         </p>
     </div>
 
-    <app-card-home *ngFor="let house of home" [card]="house"></app-card-home>
+    <app-card-home [card]="{
+        title:'Lámparas',
+        subtitle:'Compralo ahora',
+        content:'No pierdas más tiempo en comprar tu lámpara de ninja, ella será tu mejor amiga',
+        link:'/hogar/lamparas',
+        imgUrl:'https://m.media-amazon.com/images/I/51QojoYXTRL._AC_UL320_.jpg'
+      }"></app-card-home>
+
+    <app-card-home [card]="{
+        title:'Sábanas',
+        subtitle:'Compralo ahora',
+        content:'Compra sábanas ninja, es hora de mimir con sábanas que cumplan tus estándares de diseño y tema',
+        link:'/hogar/sabanas',
+        imgUrl:'https://m.media-amazon.com/images/I/811pQi8fQUL._AC_UL320_.jpg'
+      }"></app-card-home>
+
+
+    <app-card-home [card]="{
+      title:'Tazas',
+      subtitle:'Compralo ahora',
+      content:'Disfruta de una buena taza de café por las mañanas',
+      link:'/hogar/tazas',
+      imgUrl:'https://m.media-amazon.com/images/I/418XI+rlb-L._AC_UL320_.jpg'
+    }"></app-card-home>
 
 
 </section>

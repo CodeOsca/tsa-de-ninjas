@@ -47,6 +47,11 @@
   <priority>0.60</priority>
 </url>
 <url>
+  <loc>https://www.deninjas.xyz/accesorios/mochilas</loc>
+  <lastmod>2022-06-20T22:35:46+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
   <loc>https://www.deninjas.xyz/accesorios/fundas-moviles</loc>
   <lastmod>2022-06-20T22:35:46+00:00</lastmod>
   <priority>0.80</priority>
@@ -61,6 +66,10 @@
   <lastmod>2022-06-20T22:35:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://www.deninjas.xyz/hogar/tazas</loc>
+  <lastmod>2022-06-20T22:35:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>
