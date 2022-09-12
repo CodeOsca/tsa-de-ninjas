@@ -16,8 +16,8 @@ export class AwordsComponent {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title: 'Autenticas espadas ninja',
-      description: '¿Buscas una buena oferta en espadas ninjas de calidad? seguro que tengo buscas',
+      title: '🔪 Autenticas espadas ninja',
+      description: '¿Buscas una buena oferta en peligrosas ⚠️ espadas ninjas de calidad? ven acá',
       slug: `${this.metaDataService.nameSite}/accesorios/espadas`,
       image: 'https://m.media-amazon.com/images/I/710kyf85kmL._AC_UL320_.jpg'
     })

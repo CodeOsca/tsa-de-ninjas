@@ -13,8 +13,8 @@ export class HomePageComponent {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title:'Tienda online de productos de ninjas',
-      description:'Tenemos una serie de productos de ninjas, tales como camisetas, sudaderas, vestimenta, disfraces, fundas móviles, lámparas, sabanas y mucho más a buen precio y calidad',
+      title:'💂‍♀️ Tienda online de productos de ninjas 🏬',
+      description:'Tenemos una serie de productos de ninjas, como camisetas, sudaderas, vestimenta, fundas móviles, lámparas, sabanas y más a buen 💲',
       slug:`${this.metaDataService.nameSite}`,
       image:"https://m.media-amazon.com/images/I/61gFnOvYnJL._AC_UL320_.jpg"
     })

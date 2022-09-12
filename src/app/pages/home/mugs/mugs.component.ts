@@ -16,8 +16,8 @@ export class MugsComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title: 'Tazas ninjas',
-      description: 'Tazas geniales con temática de ninjas al mejor precio',
+      title: '🍷🍻 Tazas ninjas',
+      description: 'Tazas geniales con temática de ninjas a pocos 💲',
       slug: `${this.metaDataService.nameSite}/hogar/tazas`,
       image: 'https://m.media-amazon.com/images/I/418XI+rlb-L._AC_UL320_.jpg'
     })

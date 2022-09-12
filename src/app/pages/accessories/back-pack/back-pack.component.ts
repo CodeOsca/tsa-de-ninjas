@@ -12,8 +12,8 @@ export class BackPackComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title:'Mochilas de ninjas',
-      description:'Lleva tus cosas sin necesidad de cargar los tu mochila ninja pavo',
+      title:'👜 Mochilas de ninjas',
+      description:'Lleva tus cosas sin 🎊 necesidad de cargargas de la mano',
       slug:`${this.metaDataService.nameSite}/accesorios/bolsos`,
       image: 'https://m.media-amazon.com/images/I/71e5aIlhUhL._AC_UL320_.jpg'
     })

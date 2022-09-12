@@ -16,8 +16,8 @@ export class CostumesComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title: 'Disfraces ninja',
-      description: `Excelentes disfraces ninja, nadie sabrá si eres real o una copia, tenemos buenos precios y una calidad increíble`,
+      title: '🤵‍♂️ Disfraces ninja',
+      description: `Excelentes disfraces ninja 🤔, por pocos 💲`,
       slug: `${this.metaDataService.nameSite}/ropa/disfraces`,
       image: 'https://m.media-amazon.com/images/I/71FUYP95kCL._AC_UL320_.jpg'
     })

@@ -17,8 +17,8 @@ export class MobileCoversComponent {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title:'Fundas de teléfono ninja',
-      description:`Estas fundas protegerán tu teléfono contra todo tipo de golpes`,
+      title:'📔 Fundas de teléfono ninja',
+      description:`Estas fundas protegerán 👮‍♂️ tu teléfono contra todo tipo de golpes`,
       slug:`${this.metaDataService.nameSite}/accesorios/fundas-moviles`,
       image: 'https://m.media-amazon.com/images/I/411tWNiLP6L._AC_UL320_.jpg'
     })

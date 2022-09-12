@@ -16,8 +16,8 @@ export class SheetsComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title: 'Sábanas de ninja baratas',
-      description: 'Sábanas ninja de buena calidad, muy buen precio y con estilo único en su clase',
+      title: '🛋️ Sábanas de ninja baratas',
+      description: '🛏️ Sábanas ninja de buena calidad, muy buen precio y con estilo único en su clase',
       slug: `${this.metaDataService.nameSite}/hogar/sabanas`,
       image: 'https://m.media-amazon.com/images/I/81E9xUbdkHS._AC_UL320_.jpg'
     })

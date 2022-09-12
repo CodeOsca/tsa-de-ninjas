@@ -12,8 +12,8 @@ export class TshirtsComponent {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title: 'Camisetas de ninjas',
-      description: `Destaca entre los demás con una fabulosa camiseta ninja`,
+      title: '👕 Camisetas de ninjas',
+      description: `Destaca entre los demás con una fabulosa 💝 camiseta ninja a pocos 💲`,
       slug: `${this.metaDataService.nameSite}/ropa/camisetas`,
       image: 'https://m.media-amazon.com/images/I/61t2y+uAo4L._AC_UL320_.jpg'
     })

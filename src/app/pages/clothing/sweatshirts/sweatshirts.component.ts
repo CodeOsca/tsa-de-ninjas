@@ -16,8 +16,8 @@ export class SweatshirtsComponent {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title: 'Sudaderas de ninjas',
-      description: `Vendemos las mejores sudaderas de ninjas que puedes encontrar en todo del mercado para sudaderas`,
+      title: '🥋 Sudaderas de ninjas',
+      description: `Vendemos las mejores 😍 sudaderas de ninjas que puedes encontrar`,
       slug: `${this.metaDataService.nameSite}/ropa/sudaderas`,
       image: 'https://m.media-amazon.com/images/I/61nT9pjqRqL._AC_UL320_.jpg'
     })

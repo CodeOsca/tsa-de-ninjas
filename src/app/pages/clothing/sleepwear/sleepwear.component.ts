@@ -12,8 +12,8 @@ export class SleepwearComponent {
 
   ngOnInit(): void {
     this.metaDataService.generateTags({
-      title: 'Pijamas ninja',
-      description: `Lo mejor en pijamas ninjas para adquirir mucho sueño y dormir más`,
+      title: '🥋 Pijamas ninja',
+      description: `Lo mejor en pijamas ninjas para 😴 dormir por más tiempo`,
       slug: `${this.metaDataService.nameSite}/ropa/pijamas`,
       image: 'https://m.media-amazon.com/images/I/51QyPXpGdXL._AC_UL320_.jpg'
     })
